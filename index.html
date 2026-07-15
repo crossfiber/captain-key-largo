@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<!-- Captain Key Largo | Fish With A Local | Dawn-to-Dark rail build v1 -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Key Largo Fishing Charters, Dawn to Dark | Captain Key Largo</title>
+<meta name="description" content="Backcountry, reef, and offshore charters with Capt. Brian Epstein, fishing Key Largo since 1976. Day or night trips, lobster runs, boat barhops. Call (954) 326-7360.">
+<meta name="keywords" content="key largo fishing charters, key largo backcountry fishing, upper keys fishing guide, night fishing key largo, key largo lobster trip, florida keys inshore charter, captain key largo, key largo boat barhop">
+<meta name="author" content="Captain Key Largo">
+<meta name="robots" content="index, follow">
+<meta name="geo.region" content="US-FL">
+<meta name="geo.placename" content="Key Largo, FL">
+<meta name="geo.position" content="25.0865;-80.4473">
+<meta name="ICBM" content="25.0865, -80.4473">
+<meta name="theme-color" content="#0B1E2E">
+<link rel="canonical" href="https://crossfiber.github.io/captain-key-largo/">
+
+<meta property="og:title" content="Key Largo Fishing Charters, Dawn to Dark | Captain Key Largo">
+<meta property="og:description" content="Backcountry, reef, and offshore charters with Capt. Brian Epstein, fishing Key Largo since 1976. Day or night trips, lobster runs, boat barhops. Call (954) 326-7360.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://crossfiber.github.io/captain-key-largo/">
+<meta property="og:site_name" content="Captain Key Largo">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://crossfiber.github.io/captain-key-largo/assets/og-share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Captain Key Largo, fish with a local in Key Largo, Florida">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Key Largo Fishing Charters, Dawn to Dark | Captain Key Largo">
+<meta name="twitter:description" content="Backcountry, reef, and offshore charters with Capt. Brian Epstein, fishing Key Largo since 1976. Day or night trips, lobster runs, boat barhops. Call (954) 326-7360.">
+<meta name="twitter:image" content="https://crossfiber.github.io/captain-key-largo/assets/og-share.jpg">
+<meta name="twitter:image:alt" content="Captain Key Largo, fish with a local in Key Largo, Florida">
+
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="assets/sunset-water.jpg" fetchpriority="high">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  /* Palette sourced from the site's own photography: dusk water navy, sunset coral, sun-bleached sand. See design-direction.md */
+  --night:#0B1E2E;--night-2:#122A3E;--night-3:#1A3550;
+  --sand:#F4EFE6;--sand-2:#E9E2D2;--white:#FFFFFF;
+  --text:#1B2833;--text-soft:#54626E;
+  --coral:#DE5827;--coral-d:#BE4519;--coral-lite:#F09A72;
+  --line:rgba(27,40,51,0.15);--line-soft:rgba(27,40,51,0.09);
+  --line-d:rgba(244,239,230,0.18);--line-d-soft:rgba(244,239,230,0.10);
+  --nav-h:72px;--nav-h-sm:60px;
+}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 20px)}
+@media(max-width:768px){html{scroll-padding-top:calc(var(--nav-h-sm) + 20px)}}
+body{font-family:'Barlow',system-ui,sans-serif;color:var(--text);background:var(--sand);line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Barlow Condensed',sans-serif;font-weight:700;line-height:1.04;text-transform:uppercase;letter-spacing:0.012em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+@media(max-width:768px){.wrap{padding:0 22px}}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:0.8rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--coral);margin-bottom:14px}
+.kicker::before{content:'';width:26px;height:3px;background:var(--coral)}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:11px;padding:15px 28px;background:var(--coral);color:#fff;font-family:'Barlow',sans-serif;font-weight:700;font-size:0.86rem;letter-spacing:0.07em;text-transform:uppercase;border:none;cursor:pointer;transition:background .18s,transform .15s,box-shadow .2s;box-shadow:0 6px 18px rgba(222,88,39,0.28)}
+.btn:hover{background:var(--coral-d);transform:translateY(-2px);box-shadow:0 10px 24px rgba(222,88,39,0.36)}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.55);box-shadow:none}
+.btn-ghost:hover{background:#fff;color:var(--night);border-color:#fff;box-shadow:none}
+.btn-night{background:transparent;color:var(--night);border:1.5px solid var(--night);box-shadow:none}
+.btn-night:hover{background:var(--night);color:var(--sand);box-shadow:none}
+.tlink{display:inline-flex;align-items:center;gap:10px;color:var(--coral);font-weight:700;font-size:0.82rem;letter-spacing:0.08em;text-transform:uppercase;border-bottom:2px solid transparent;padding-bottom:3px;transition:border-color .2s,gap .2s}
+.tlink:hover{border-color:var(--coral);gap:15px}
+
+/* NAV */
+nav.site-nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);background:var(--sand);border-bottom:1px solid var(--line);box-shadow:0 1px 10px rgba(27,40,51,0.05);display:flex;align-items:center}
+.nav-inner{width:100%;max-width:1320px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.wordmark{display:flex;flex-direction:column;line-height:1}
+.wordmark .wm{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.35rem;letter-spacing:0.04em;text-transform:uppercase;color:var(--night);white-space:nowrap}
+.wordmark .wm i{color:var(--coral);font-size:0.88em;margin-right:7px}
+.wordmark .wsub{font-size:0.6rem;font-weight:700;letter-spacing:0.24em;text-transform:uppercase;color:var(--coral);margin-top:4px}
+.nav-links{display:flex;gap:30px;list-style:none}
+.nav-links a{font-weight:600;font-size:0.88rem;color:var(--text);transition:color .2s}
+.nav-links a:hover{color:var(--coral)}
+.nav-right{display:flex;gap:18px;align-items:center}
+.nav-phone{font-weight:700;font-size:0.96rem;color:var(--night);display:inline-flex;align-items:center;gap:8px}
+.nav-phone i{color:var(--coral);font-size:0.9em}
+.nav-phone:hover{color:var(--coral)}
+.nav-cta{padding:11px 20px;background:var(--coral);color:#fff;font-weight:700;font-size:0.76rem;letter-spacing:0.08em;text-transform:uppercase;transition:background .18s}
+.nav-cta:hover{background:var(--coral-d)}
+@media(max-width:1020px){.nav-links,.nav-right .nav-phone,.nav-right .nav-cta{display:none}}
+.mobile-actions{display:none;gap:10px;align-items:center}
+@media(max-width:1020px){.mobile-actions{display:flex}}
+.mobile-call{width:44px;height:44px;background:var(--coral);color:#fff;display:inline-flex;align-items:center;justify-content:center}
+.hamburger{width:44px;height:44px;background:transparent;border:1.5px solid var(--line);cursor:pointer;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0}
+.hamburger span{display:block;width:22px;height:2.5px;background:var(--night)}
+@media(max-width:600px){.nav-inner{padding:0 16px}.wordmark .wm{font-size:1.08rem}.wordmark .wsub{letter-spacing:0.18em}}
+@media(max-width:374px){.wordmark .wsub{display:none}}
+
+/* DRAWER */
+.nav-drawer{position:fixed;top:0;right:0;width:330px;max-width:88vw;height:100dvh;background:var(--night);color:var(--sand);z-index:1001;transform:translateX(100%);transition:transform .32s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top)}
+.nav-drawer.open{transform:translateX(0)}
+.drawer-header{display:flex;justify-content:space-between;align-items:center;padding:16px 22px;border-bottom:1px solid var(--line-d)}
+.drawer-header .dh-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:0.05em;text-transform:uppercase;color:var(--sand)}
+.drawer-header .dh-name i{color:var(--coral-lite);margin-right:8px}
+.drawer-close{background:none;border:none;font-size:1.4rem;color:var(--sand);cursor:pointer;width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center}
+.drawer-close:hover{color:var(--coral-lite)}
+.drawer-links{display:flex;flex-direction:column;flex:1;overflow-y:auto;min-height:0;padding:8px 0}
+.drawer-links a{padding:16px 22px;color:var(--sand);font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:1.3rem;letter-spacing:0.04em;text-transform:uppercase;border-bottom:1px solid var(--line-d-soft);transition:color .2s,background .2s,padding-left .2s}
+.drawer-links a span{color:var(--coral-lite);font-size:0.78em;margin-right:10px}
+.drawer-links a:hover{color:var(--coral-lite);background:var(--night-2);padding-left:30px}
+.drawer-footer{padding:18px 22px calc(20px + env(safe-area-inset-bottom));border-top:1px solid var(--line-d);background:var(--night-2);display:flex;flex-direction:column;gap:12px}
+.drawer-phone{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#fff;color:var(--night);font-weight:700;font-size:1.05rem;padding:13px}
+.drawer-phone i{color:var(--coral)}
+.drawer-footer .btn{justify-content:center;box-shadow:none}
+.nav-overlay{position:fixed;inset:0;background:rgba(6,14,22,0.62);z-index:1000;display:none}
+.nav-overlay.open{display:block}
+body.drawer-open{overflow:hidden}
+body.drawer-open .mobile-actions{visibility:hidden}
+
+/* HERO */
+.hero{position:relative;min-height:92dvh;display:flex;align-items:flex-end;padding:calc(var(--nav-h) + 44px) 0 64px;background:var(--night)}
+.hero::before{content:'';position:absolute;inset:0;background-image:url('assets/sunset-water.jpg');background-size:cover;background-position:center 42%;z-index:0}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,30,46,0.68) 0%,rgba(11,30,46,0.24) 36%,rgba(11,30,46,0.5) 66%,rgba(11,30,46,0.94) 100%);z-index:1}
+.hero-inner{position:relative;z-index:2;width:100%;max-width:1240px;margin:0 auto;padding:0 40px;color:#fff}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 15px;border:1px solid rgba(255,255,255,0.35);background:rgba(11,30,46,0.35);font-size:0.78rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:22px}
+.hero-eyebrow i{color:var(--coral-lite)}
+.hero h1{font-size:clamp(2.5rem,6vw,4.9rem);color:#fff;max-width:16ch;margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--coral-lite)}
+.hero .lede{font-size:clamp(1.02rem,1.5vw,1.24rem);font-weight:400;color:rgba(255,255,255,0.88);max-width:56ch;margin-bottom:30px;line-height:1.55}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.hero-cred{margin-top:32px;padding-top:22px;border-top:1px solid rgba(255,255,255,0.24);display:flex;gap:30px;flex-wrap:wrap;font-size:0.9rem;font-weight:600;color:rgba(255,255,255,0.85)}
+.hero-cred span{display:inline-flex;align-items:center;gap:9px}
+.hero-cred i{color:var(--coral-lite)}
+.hero-photo-m{display:none}
+@media(max-width:768px){
+  .hero{padding:calc(var(--nav-h-sm) + 26px) 0 40px;min-height:0;align-items:flex-start;background:var(--sand)}
+  .hero::before,.hero::after{display:none}
+  .hero-inner{padding:0 22px;color:var(--text)}
+  .hero-eyebrow{border-color:var(--line);background:var(--sand-2);color:var(--text);margin-bottom:16px}
+  .hero-eyebrow i{color:var(--coral)}
+  .hero h1{color:var(--night);font-size:clamp(2rem,8.4vw,2.7rem);margin-bottom:14px}
+  .hero h1 em{color:var(--coral)}
+  .hero .lede{color:var(--text-soft);font-size:1rem;margin-bottom:22px}
+  .m-trim{display:none}
+  .hero-ctas{flex-direction:column;align-items:stretch;gap:10px}
+  .hero .btn-ghost{color:var(--night);border-color:var(--night)}
+  .hero .btn-ghost:hover{background:var(--night);color:var(--sand)}
+  .hero-photo-m{display:block;aspect-ratio:16/10;margin-top:24px;background-image:url('assets/sunset-water.jpg');background-size:cover;background-position:center 42%;border:1px solid var(--line)}
+  .hero-cred{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);display:grid;gap:9px;font-size:0.86rem;color:var(--text-soft)}
+  .hero-cred i{color:var(--coral)}
+}
+
+/* STATEMENT */
+.statement{padding:104px 0}
+.statement-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:start}
+.statement h2{font-size:clamp(1.9rem,3.6vw,3rem);color:var(--night)}
+.statement h2 em{font-style:normal;color:var(--coral)}
+.statement .st-body p{font-size:1.08rem;color:var(--text-soft);line-height:1.72;margin-bottom:18px}
+.statement .st-body p:last-child{margin-bottom:0}
+.statement .st-body b{color:var(--night);font-weight:700}
+@media(max-width:860px){.statement{padding:60px 0}.statement-grid{grid-template-columns:1fr;gap:18px}.statement .st-body p{font-size:1rem}}
+
+/* DAY RAIL (signature) */
+.dayrail{background:var(--white);border-top:1px solid var(--line);padding:96px 0 40px}
+.rail-head{max-width:1240px;margin:0 auto 20px;padding:0 40px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end}
+.rail-head h2{font-size:clamp(2rem,4vw,3.3rem);color:var(--night);max-width:16ch}
+.rail-head h2 em{font-style:normal;color:var(--coral)}
+.rail-head .rh-note{font-size:0.95rem;color:var(--text-soft);max-width:34ch;line-height:1.6;padding-bottom:8px}
+@media(max-width:860px){.rail-head{grid-template-columns:1fr;gap:10px;padding:0 22px}.dayrail{padding:60px 0 20px}}
+.dayband{display:grid;grid-template-columns:190px 1fr 1fr;align-items:stretch;border-top:1px solid var(--line);max-width:1240px;margin:0 auto;padding:0 40px}
+.dayband:last-of-type{border-bottom:1px solid var(--line)}
+.rail-cell{position:relative;padding:44px 26px 44px 0}
+.rail-cell::after{content:'';position:absolute;top:0;bottom:0;right:0;width:1px;background:var(--line-soft)}
+.rail-time{position:sticky;top:calc(var(--nav-h) + 24px)}
+.rail-time .rt-ico{width:52px;height:52px;border:1.5px solid var(--night);color:var(--night);display:inline-flex;align-items:center;justify-content:center;font-size:1.25rem;margin-bottom:14px}
+.rail-time .rt-when{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.5rem;text-transform:uppercase;color:var(--night);line-height:1.05}
+.rail-time .rt-clock{display:block;font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral);margin-top:7px}
+.band-copy{padding:44px 40px 44px 34px;display:flex;flex-direction:column;justify-content:center}
+.band-copy h3{font-size:clamp(1.45rem,2.3vw,2.05rem);color:var(--night);margin-bottom:12px}
+.band-copy p{font-size:1rem;color:var(--text-soft);line-height:1.66;margin-bottom:14px}
+.band-copy .also{font-size:0.86rem;font-weight:600;color:var(--night);padding-top:14px;border-top:1px solid var(--line-soft);margin-bottom:18px}
+.band-copy .also i{color:var(--coral);margin-right:7px}
+.band-photo{min-height:380px;background-size:cover;background-position:center}
+.dayband.flip .band-photo{order:2}
+.dayband.flip .band-copy{order:3;padding:44px 0 44px 40px}
+.dayband:nth-child(odd) .band-photo{order:3}
+@media(max-width:960px){
+  .dayband{grid-template-columns:1fr;padding:0 22px}
+  .rail-cell{padding:26px 0 0}
+  .rail-cell::after{display:none}
+  .rail-time{position:static;display:flex;align-items:center;gap:14px}
+  .rail-time .rt-ico{width:42px;height:42px;font-size:1rem;margin-bottom:0}
+  .rail-time .rt-when{font-size:1.2rem;display:inline}
+  .rail-time .rt-clock{display:inline;margin-top:0;margin-left:10px}
+  .band-photo{min-height:0;aspect-ratio:16/9;order:2 !important;margin-top:18px}
+  .band-copy{order:3 !important;padding:20px 0 34px !important}
+  .band-copy h3{margin-bottom:10px}
+  .band-copy p{font-size:0.96rem}
+}
+
+/* BOAT BAND */
+.boat{background:var(--night);color:var(--sand);display:grid;grid-template-columns:1.15fr 0.85fr;align-items:stretch}
+.boat-photo{min-height:520px;background-image:url('assets/sea-hunt-boat.jpg');background-size:cover;background-position:center 62%}
+.boat-text{padding:clamp(52px,6vw,92px) clamp(38px,5vw,80px)}
+.boat-text h2{font-size:clamp(1.9rem,3.4vw,2.9rem);color:#fff;margin-bottom:18px;max-width:15ch}
+.boat-text h2 em{font-style:normal;color:var(--coral-lite)}
+.boat-text p{font-size:1.04rem;color:rgba(244,239,230,0.82);line-height:1.7;margin-bottom:16px}
+.boat-specs{list-style:none;margin:26px 0 30px;border-top:1px solid var(--line-d)}
+.boat-specs li{display:flex;justify-content:space-between;gap:18px;padding:13px 0;border-bottom:1px solid var(--line-d-soft);font-size:0.96rem}
+.boat-specs .sk{color:rgba(244,239,230,0.62);font-weight:500}
+.boat-specs .sv{color:#fff;font-weight:700;text-align:right}
+@media(max-width:920px){.boat{grid-template-columns:1fr}.boat-photo{min-height:0;aspect-ratio:16/10}.boat-text{padding:36px 22px 48px}}
+
+/* CAPTAIN */
+.captain{padding:110px 0;background:var(--sand)}
+.captain-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:64px;align-items:start}
+.captain-photo{position:relative}
+.captain-photo .cp-img{aspect-ratio:4/4.4;background-image:url('assets/captain-brian.jpg');background-size:cover;background-position:center 20%}
+.captain-photo .cp-tag{position:absolute;left:22px;bottom:-20px;background:var(--coral);color:#fff;padding:13px 20px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:0.05em;text-transform:uppercase;box-shadow:0 12px 28px rgba(222,88,39,0.35)}
+.captain-copy h2{font-size:clamp(2rem,3.8vw,3.2rem);color:var(--night);margin-bottom:18px;max-width:16ch}
+.captain-copy h2 em{font-style:normal;color:var(--coral)}
+.captain-copy p{font-size:1.05rem;color:var(--text-soft);line-height:1.72;margin-bottom:16px}
+.captain-copy p b{color:var(--night);font-weight:700}
+.cap-marks{list-style:none;margin:28px 0 0;border-top:2px solid var(--night)}
+.cap-marks li{display:grid;grid-template-columns:118px 1fr;gap:22px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.cap-marks .yr{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.7rem;color:var(--coral);line-height:1}
+.cap-marks .td b{display:block;font-size:1.04rem;font-weight:700;color:var(--night);margin-bottom:3px}
+.cap-marks .td p{font-size:0.93rem;color:var(--text-soft);line-height:1.55;margin:0}
+@media(max-width:920px){.captain{padding:64px 0}.captain-grid{grid-template-columns:1fr;gap:44px}.captain-photo .cp-img{aspect-ratio:4/3.4;background-position:center 14%}.cap-marks li{grid-template-columns:64px 1fr;gap:14px;padding:14px 0}.cap-marks .yr{font-size:1.2rem}}
+
+/* FAQ */
+.faq{padding:104px 0;background:var(--white);border-top:1px solid var(--line)}
+.faq-grid{display:grid;grid-template-columns:0.42fr 0.58fr;gap:56px;align-items:start}
+.faq-intro h2{font-size:clamp(1.9rem,3.4vw,2.8rem);color:var(--night);margin-bottom:16px}
+.faq-intro p{font-size:1.02rem;color:var(--text-soft);line-height:1.66;margin-bottom:26px}
+.accordion{border-top:1px solid var(--line)}
+.acc-item{border-bottom:1px solid var(--line)}
+.acc-head{width:100%;background:none;border:none;cursor:pointer;text-align:left;padding:21px 4px;display:flex;justify-content:space-between;align-items:center;gap:22px;font-family:'Barlow',sans-serif;font-weight:600;font-size:1.04rem;line-height:1.4;color:var(--night)}
+.acc-item.open .acc-head{color:var(--coral)}
+.acc-head i{color:var(--coral);transition:transform .3s;flex-shrink:0;font-size:0.9rem}
+.acc-item.open .acc-head i{transform:rotate(45deg)}
+.acc-body{max-height:0;overflow:hidden;transition:max-height .34s ease}
+.acc-body-inner{padding:0 4px 22px;color:var(--text-soft);font-size:0.99rem;line-height:1.68;max-width:60ch}
+@media(max-width:880px){.faq{padding:60px 0}.faq-grid{grid-template-columns:1fr;gap:26px}.acc-head{padding:17px 4px;font-size:0.99rem}}
+
+/* CONTACT */
+.contact{padding:104px 0;background:var(--night);color:var(--sand)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.contact-left h2{font-size:clamp(1.9rem,3.4vw,2.8rem);color:#fff;margin-bottom:14px}
+.contact-left h2 em{font-style:normal;color:var(--coral-lite)}
+.contact-left .csub{color:rgba(244,239,230,0.76);font-size:1.02rem;line-height:1.6;margin-bottom:30px;max-width:44ch}
+.field{margin-bottom:22px}
+.field label{display:block;font-size:0.74rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral-lite);margin-bottom:9px}
+.field input,.field select,.field textarea{width:100%;padding:11px 2px;border:none;border-bottom:1.5px solid rgba(244,239,230,0.3);background:transparent;color:#fff;font-family:'Barlow',sans-serif;font-size:1.02rem;transition:border-color .2s}
+.field input::placeholder,.field textarea::placeholder{color:rgba(244,239,230,0.4)}
+.field select{color:#fff}
+.field select option{color:var(--night)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--coral-lite)}
+.field textarea{resize:vertical;min-height:84px}
+.field.err input,.field.err select,.field.err textarea{border-color:#E88}
+.field .msg{display:none;color:#F2A896;font-size:0.82rem;margin-top:7px}
+.field.err .msg{display:block}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.contact form .btn{margin-top:6px}
+.form-status{margin-top:16px;padding:13px 16px;font-size:0.94rem;display:none;border-left:3px solid var(--coral-lite)}
+.form-status.show{display:block}
+.form-status.success{background:rgba(240,154,114,0.13);color:#F6CDB8}
+.form-status.error{background:rgba(232,136,136,0.12);color:#F2B2A4;border-left-color:#E88}
+.contact-right{border-left:1px solid var(--line-d);padding-left:56px}
+.contact .cl{font-size:0.74rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral-lite);margin-bottom:12px}
+.crow{display:flex;gap:15px;align-items:baseline;padding:9px 0;font-size:1rem;color:rgba(244,239,230,0.87);line-height:1.55}
+.crow i{color:var(--coral-lite);width:18px;text-align:center;flex-shrink:0}
+.crow a{font-weight:700;color:#fff}
+.crow a:hover{color:var(--coral-lite)}
+.c-block{padding-bottom:22px;border-bottom:1px solid var(--line-d-soft);margin-bottom:24px}
+.c-note{font-size:0.94rem;color:rgba(244,239,230,0.64);line-height:1.6}
+@media(max-width:900px){.contact{padding:60px 0}.contact-grid{grid-template-columns:1fr;gap:38px}.contact-right{border-left:none;border-top:1px solid var(--line-d);padding-left:0;padding-top:26px}}
+@media(max-width:460px){.frow{grid-template-columns:1fr;gap:0}}
+
+/* FOOTER */
+footer{background:#081724;color:rgba(244,239,230,0.72);padding:62px 0 28px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:40px}
+.foot-brand .fb-wm{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.3rem;letter-spacing:0.05em;text-transform:uppercase;color:#fff;display:inline-flex;align-items:center;gap:9px;margin-bottom:6px}
+.foot-brand .fb-wm i{color:var(--coral-lite)}
+.foot-brand .fb-tag{display:block;font-size:0.68rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--coral-lite);margin-bottom:16px}
+.foot-brand p{font-size:0.93rem;line-height:1.62;max-width:34ch;margin-bottom:16px}
+.foot-col h4{font-family:'Barlow',sans-serif;font-size:0.76rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.foot-col a{font-size:0.94rem;transition:color .2s}
+.foot-col a:hover{color:var(--coral-lite)}
+.foot-col address{font-style:normal;font-size:0.94rem;line-height:1.85}
+.foot-col address a{font-weight:600;color:#fff}
+.foot-col address a:hover{color:var(--coral-lite)}
+.foot-bottom{max-width:1240px;margin:44px auto 0;padding:22px 40px 0;border-top:1px solid var(--line-d-soft);display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;font-size:0.83rem}
+.built-by{display:inline-flex;align-items:center;gap:9px;font-size:0.82rem;color:rgba(244,239,230,0.6);transition:color .2s}
+.built-by img{height:19px;width:auto;opacity:0.85;transition:opacity .2s}
+.built-by:hover{color:#fff}
+.built-by:hover img{opacity:1}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr;gap:32px}.foot-brand{grid-column:1/-1}.foot-bottom{padding:22px 22px 0}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="#top" class="wordmark" aria-label="Captain Key Largo home">
+      <span class="wm"><i class="fa-solid fa-anchor"></i>Captain Key Largo</span>
+      <span class="wsub">Fish With A Local</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#trips">The Day</a></li>
+      <li><a href="#boat">The Boat</a></li>
+      <li><a href="#captain">The Captain</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="tel:+19543267360" class="nav-phone"><i class="fa-solid fa-phone-volume"></i> (954) 326-7360</a>
+      <a href="#contact" class="nav-cta">Book a Trip</a>
+    </div>
+    <div class="mobile-actions">
+      <a href="tel:+19543267360" class="mobile-call" aria-label="Call Captain Key Largo"><i class="fa-solid fa-phone"></i></a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navDrawer"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<aside class="nav-drawer" id="navDrawer" aria-hidden="true" aria-label="Site menu">
+  <div class="drawer-header">
+    <span class="dh-name"><i class="fa-solid fa-anchor"></i>Captain Key Largo</span>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="drawer-links">
+    <a href="#trips"><span>01</span>Dawn to Dark</a>
+    <a href="#boat"><span>02</span>The Boat</a>
+    <a href="#captain"><span>03</span>The Captain</a>
+    <a href="#faq"><span>04</span>FAQ</a>
+    <a href="#contact"><span>05</span>Book a Trip</a>
+  </nav>
+  <div class="drawer-footer">
+    <a href="tel:+19543267360" class="drawer-phone"><i class="fa-solid fa-phone-volume"></i> (954) 326-7360</a>
+    <a href="#contact" class="btn">Book a Trip</a>
+  </div>
+</aside>
+
+<span id="top"></span>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <span class="hero-eyebrow"><i class="fa-solid fa-location-crosshairs"></i> Key Largo &middot; Upper Florida Keys</span>
+    <h1>Fish Key Largo with a local. <em>First light to after dark.</em></h1>
+    <p class="lede">Backcountry, reef, and offshore charters with Captain Brian Epstein, a 100 Ton USCG Master who has fished these waters since 1976. <span class="m-trim">Son of Bob Epstein, the Miami Herald's legendary fishing editor. </span>Day trips, night trips, lobster runs, even a boat-to-bar dinner cruise. Your trip, your hours.</p>
+    <div class="hero-ctas">
+      <a href="tel:+19543267360" class="btn"><i class="fa-solid fa-phone-volume"></i> Call or Text (954) 326-7360</a>
+      <a href="#trips" class="btn btn-ghost">Plan Your Day</a>
+    </div>
+    <div class="hero-photo-m" role="img" aria-label="Anglers with rods bent fishing the Key Largo inshore waters with Captain Key Largo"></div>
+    <div class="hero-cred">
+      <span><i class="fa-solid fa-certificate"></i> USCG 100 Ton Master Captain</span>
+      <span><i class="fa-solid fa-fish-fins"></i> Fishing the Upper Keys since 1976</span>
+      <span><i class="fa-solid fa-moon"></i> Day or night. Dusk to dawn trips run all season</span>
+    </div>
+  </div>
+</header>
+
+<!-- STATEMENT -->
+<section class="statement">
+  <div class="wrap">
+    <div class="statement-grid">
+      <h2>Don't rent a boat. <em>Hire the guy who grew up here.</em></h2>
+      <div class="st-body">
+        <p>A rental gives you a hull, a map, and a full day of guessing. Key Largo's water is a maze of flats, channels, and reef lines that punishes guesswork, and the fish do not wait around while you figure it out.</p>
+        <p><b>Captain Brian puts you on his boat, on his spots, on his tide.</b> One captain, one boat, and five decades of local knowledge working for you by the day or by the week. You fish, swim, snorkel, eat, and explore. He handles everything else.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DAY RAIL (signature section) -->
+<div id="trips" class="dayrail">
+  <div class="rail-head">
+    <h2>One captain. <em>Every hour of the water.</em></h2>
+    <p class="rh-note">Most charters sell you a half-day block. Brian builds trips around when your target actually bites, from first light to well past midnight.</p>
+  </div>
+
+  <div class="dayband">
+    <div class="rail-cell"><div class="rail-time">
+      <span class="rt-ico"><i class="fa-solid fa-cloud-sun"></i></span>
+      <span class="rt-when">First Light</span>
+      <span class="rt-clock">Sunrise bite</span>
+    </div></div>
+    <div class="band-copy">
+      <h3>Backcountry &amp; Inshore</h3>
+      <p>Florida Bay flats, mangrove edges, and the channels only a local runs at speed. Light-tackle inshore fishing on calm, protected water. The right call for families, first-timers, and anyone who wants steady action over a long ride.</p>
+      <div class="also"><i class="fa-solid fa-water"></i> Calm protected water. Great first trip for kids.</div>
+      <a href="#contact" class="tlink">Book the morning bite <i class="fa-solid fa-arrow-right-long"></i></a>
+    </div>
+    <div class="band-photo" style="background-image:url('assets/fun-fishing.jpg');background-position:center 30%" role="img" aria-label="Angler holding a snapper caught inshore on a Key Largo fishing charter"></div>
+  </div>
+
+  <div class="dayband flip">
+    <div class="rail-cell"><div class="rail-time">
+      <span class="rt-ico"><i class="fa-solid fa-sun"></i></span>
+      <span class="rt-when">Full Sun</span>
+      <span class="rt-clock">Reef &amp; offshore</span>
+    </div></div>
+    <div class="band-photo" style="background-image:url('assets/offshore.jpg')" role="img" aria-label="Sailfish brought boatside on an offshore Key Largo charter with Captain Key Largo"></div>
+    <div class="band-copy">
+      <h3>Reef &amp; Offshore</h3>
+      <p>Out past the reef line for the fish people frame on the wall: sailfish, mackerel, and the deep-water bite of the Upper Keys. Or slow it down and turn the middle of the day into a snorkel and eco tour over the same reef.</p>
+      <div class="also"><i class="fa-solid fa-person-swimming"></i> Snorkel, dive, and eco tour options on the same water.</div>
+      <a href="#contact" class="tlink">Book the blue water <i class="fa-solid fa-arrow-right-long"></i></a>
+    </div>
+  </div>
+
+  <div class="dayband">
+    <div class="rail-cell"><div class="rail-time">
+      <span class="rt-ico"><i class="fa-solid fa-champagne-glasses"></i></span>
+      <span class="rt-when">Golden Hour</span>
+      <span class="rt-clock">Sunset runs</span>
+    </div></div>
+    <div class="band-copy">
+      <h3>Dine by Water &amp; Flats Sharks</h3>
+      <p>Two very different sunsets. Barhop the waterfront restaurants of the Upper Keys by boat and eat where the docks are the front door. Or stake out a flat as the light drops and hook into a shark in water shallow enough to see the whole fight.</p>
+      <div class="also"><i class="fa-solid fa-utensils"></i> The Keys' best dinner commute: no traffic, all water.</div>
+      <a href="#contact" class="tlink">Book a sunset run <i class="fa-solid fa-arrow-right-long"></i></a>
+    </div>
+    <div class="band-photo" style="background-image:url('assets/sunset-bay.jpg')" role="img" aria-label="Sunset over the water on a Captain Key Largo dine by water boat cruise"></div>
+  </div>
+
+  <div class="dayband flip">
+    <div class="rail-cell"><div class="rail-time">
+      <span class="rt-ico"><i class="fa-solid fa-moon"></i></span>
+      <span class="rt-when">After Dark</span>
+      <span class="rt-clock">Dusk to dawn</span>
+    </div></div>
+    <div class="band-photo" style="background-image:url('assets/night-water.jpg');background-position:center 40%" role="img" aria-label="Spiny lobster catch held up on a night trip with Captain Key Largo"></div>
+    <div class="band-copy">
+      <h3>Night Trips: Lobster, Shrimp &amp; Bowfishing</h3>
+      <p>This is where a local guide earns it. Dusk to dawn fishing, in-season lobster and shrimp runs, and bowfishing under lights. The water empties out after sunset and the Keys turn into a different place. Very few charters will take you there.</p>
+      <div class="also"><i class="fa-solid fa-shrimp"></i> Lobster and shrimp trips run in season. Ask for dates.</div>
+      <a href="#contact" class="tlink">Book a night run <i class="fa-solid fa-arrow-right-long"></i></a>
+    </div>
+  </div>
+
+  <div class="rail-head" style="padding-top:36px;padding-bottom:44px">
+    <p class="rh-note" style="max-width:60ch">Rates depend on the trip, the hours, and the season. Text Brian what you want to do and you will get a straight number back, usually the same day.</p>
+    <a href="sms:+19543267360" class="btn btn-night"><i class="fa-solid fa-message"></i> Text Brian Your Trip</a>
+  </div>
+</div>
+
+<!-- BOAT -->
+<section id="boat" class="boat">
+  <div class="boat-photo" role="img" aria-label="The 2021 Sea Hunt 25 foot bay boat of Captain Key Largo beached on a Florida Keys sandbar"></div>
+  <div class="boat-text">
+    <div class="kicker" style="color:var(--coral-lite)">The ride</div>
+    <h2>A bay boat built for <em>both sides of the island.</em></h2>
+    <p>The 2021 Sea Hunt 25 bay boat is the Upper Keys sweet spot: shallow enough to slide onto the backcountry flats, seaworthy enough to run the reef and the near-offshore blue water on the Atlantic side.</p>
+    <ul class="boat-specs">
+      <li><span class="sk">Boat</span><span class="sv">2021 Sea Hunt 25' Bay Boat</span></li>
+      <li><span class="sk">Water</span><span class="sv">Backcountry flats to offshore blue water</span></li>
+      <li><span class="sk">Trips</span><span class="sv">Fishing, snorkel, eco, cruising, day or night</span></li>
+      <li><span class="sk">Gear</span><span class="sv">Rods, tackle, and local bait handled by the captain</span></li>
+    </ul>
+    <a href="#contact" class="btn"><i class="fa-solid fa-calendar-check"></i> Check a Date</a>
+  </div>
+</section>
+
+<!-- CAPTAIN -->
+<section id="captain" class="captain">
+  <div class="wrap">
+    <div class="captain-grid">
+      <div class="captain-photo">
+        <div class="cp-img" role="img" aria-label="Captain Brian Epstein of Captain Key Largo holding a Spanish mackerel on the water"></div>
+        <div class="cp-tag">Fishing here since 1976</div>
+      </div>
+      <div class="captain-copy">
+        <div class="kicker">The captain</div>
+        <h2>Son of fishing royalty. <em>Raised on this water.</em></h2>
+        <p><b>Captain Brian Epstein grew up in the Florida Keys as the son of Bob Epstein</b>, the Miami Herald's fishing editor, a photojournalist and author who spent a lifetime writing the book on Keys fishing. Brian has been fishing and exploring these waters since 1976, and it shows in every spot he runs to without checking a chart.</p>
+        <p>He is a <b>USCG 100 Ton Master captain</b> and a proven tournament captain and decorated tournament angler. Alongside Captain Key Largo, he co-runs the <a href="https://crossfiber.github.io/poppa-wahoo/" style="color:var(--coral);font-weight:700">Poppa Wahoo Collective</a>, the family's Islamorada sportfishing fleet founded in tribute to his father.</p>
+        <ul class="cap-marks">
+          <li><span class="yr">1976</span><div class="td"><b>First lines in the water</b><p>Raised in the Keys, fishing and exploring the Upper Keys from childhood.</p></div></li>
+          <li><span class="yr">40+</span><div class="td"><b>Years guiding the Upper Keys</b><p>Backcountry, reef, and offshore. An all-around specialist on both sides of the island.</p></div></li>
+          <li><span class="yr">100T</span><div class="td"><b>USCG Master Captain</b><p>Licensed to run vessels far bigger than the bay boat. Yacht transport experience across the Caribbean and US East Coast.</p></div></li>
+          <li><span class="yr">2025</span><div class="td"><b>Co-founded the Poppa Wahoo Collective</b><p>The family's four-boat Islamorada charter fleet, built in tribute to Bob Epstein.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="faq">
+  <div class="wrap">
+    <div class="faq-grid">
+      <div class="faq-intro">
+        <div class="kicker">Before you book</div>
+        <h2>Straight answers, like the fishing.</h2>
+        <p>The questions every first-timer texts Brian. If yours is not here, call or text and ask him directly. You will be talking to the captain, not a booking desk.</p>
+        <a href="tel:+19543267360" class="btn btn-night"><i class="fa-solid fa-phone-volume"></i> (954) 326-7360</a>
+      </div>
+      <div class="accordion" id="accordion">
+        <div class="acc-item"><button class="acc-head" aria-expanded="false">Do you fish backcountry or offshore? <i class="fa-solid fa-plus"></i></button><div class="acc-body"><div class="acc-body-inner">Both. Brian is an Upper Keys all-around specialist. The bay boat runs the Florida Bay backcountry and mangrove flats, and it also runs the Atlantic-side reef and near-offshore blue water. Tell him what you want to catch and he will pick the side of the island and the tide.</div></div></div>
+        <div class="acc-item"><button class="acc-head" aria-expanded="false">Can we really fish at night? <i class="fa-solid fa-plus"></i></button><div class="acc-body"><div class="acc-body-inner">Yes, and it is the specialty of the house. Dusk to dawn fishing trips, bowfishing under lights, and in-season lobster and shrimp runs all happen after dark. Night trips are quieter, cooler, and often the best bite of the day.</div></div></div>
+        <div class="acc-item"><button class="acc-head" aria-expanded="false">What is the boat? <i class="fa-solid fa-plus"></i></button><div class="acc-body"><div class="acc-body-inner">A 2021 Sea Hunt 25 bay boat. It drafts shallow enough for the backcountry flats and handles the reef and near-offshore water on the ocean side, which is exactly why Brian runs a bay boat instead of a big offshore-only hull.</div></div></div>
+        <div class="acc-item"><button class="acc-head" aria-expanded="false">We don't fish. Is there a trip for us? <i class="fa-solid fa-plus"></i></button><div class="acc-body"><div class="acc-body-inner">Plenty. Snorkel and dive runs, eco tours through the backcountry, sandbar afternoons, sunset cruises, and the Dine by Water barhop, where you hit the Upper Keys' waterfront restaurants and bars by boat. Captain-for-a-day means the day is whatever you want it to be.</div></div></div>
+        <div class="acc-item"><button class="acc-head" aria-expanded="false">What does a trip cost? <i class="fa-solid fa-plus"></i></button><div class="acc-body"><div class="acc-body-inner">It depends on the trip, the hours, and the season, so Brian quotes each trip directly instead of posting one-size-fits-all rates. Text or call with what you want to do and how many people, and you will get a straight number back, usually the same day.</div></div></div>
+        <div class="acc-item"><button class="acc-head" aria-expanded="false">Where do we meet you? <i class="fa-solid fa-plus"></i></button><div class="acc-body"><div class="acc-body-inner">Trips run out of Key Largo. The exact dock or ramp depends on the trip and the tide, and Brian confirms the meeting spot with you when you book. If you are staying in the Upper Keys, pickup options may be possible. Just ask.</div></div></div>
+        <div class="acc-item"><button class="acc-head" aria-expanded="false">Can you run our boat instead? <i class="fa-solid fa-plus"></i></button><div class="acc-body"><div class="acc-body-inner">Yes. Brian is a USCG 100 Ton Master and hires out as your captain by the day or by the week, on his boat or yours. He also has yacht charter and transport experience throughout the Caribbean and the US East Coast.</div></div></div>
+        <div class="acc-item"><button class="acc-head" aria-expanded="false">How do we book? <i class="fa-solid fa-plus"></i></button><div class="acc-body"><div class="acc-body-inner">Text or call (954) 326-7360, or send the form below. Tell him the dates you are in the Keys, your group size, and what kind of day you are picturing. He will build the trip around it and confirm the details directly with you.</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <div class="kicker" style="color:var(--coral-lite)">Book a trip</div>
+        <h2>Tell Brian about <em>your day on the water.</em></h2>
+        <p class="csub">Dates, group size, and what you want to do. Fishing, snorkeling, a night run, a barhop, or all of it. He answers directly.</p>
+        <form id="bookForm" name="booking" method="POST" novalidate onsubmit="return submitForm(event)">
+          <div class="frow">
+            <div class="field" id="f-name">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name">
+              <div class="msg">Brian needs a name to get back to you.</div>
+            </div>
+            <div class="field" id="f-phone">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="(305) 555-0123">
+              <div class="msg">That number looks short. Double-check it.</div>
+            </div>
+          </div>
+          <div class="field" id="f-email">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@email.com">
+            <div class="msg">That looks incomplete. Try something like you@email.com.</div>
+          </div>
+          <div class="field" id="f-trip">
+            <label for="trip">What kind of trip</label>
+            <select id="trip" name="trip">
+              <option value="">Pick the closest one</option>
+              <option>Backcountry / inshore fishing</option>
+              <option>Reef / offshore fishing</option>
+              <option>Night trip (dusk to dawn, bowfishing, lobster, shrimp)</option>
+              <option>Snorkel / dive / eco tour</option>
+              <option>Dine by Water barhop / cruise</option>
+              <option>Captain for a day or week</option>
+              <option>Not sure yet</option>
+            </select>
+            <div class="msg">Pick the closest trip so the quote is right.</div>
+          </div>
+          <div class="field">
+            <label for="message">Dates &amp; details</label>
+            <textarea id="message" name="message" placeholder="When you're in the Keys, how many people, and what you're picturing."></textarea>
+          </div>
+          <button type="submit" class="btn"><i class="fa-solid fa-paper-plane"></i> Send It to Brian</button>
+          <div class="form-status" id="formStatus"></div>
+        </form>
+      </div>
+      <div class="contact-right">
+        <div class="c-block">
+          <div class="cl">Reach the captain</div>
+          <div class="crow"><i class="fa-solid fa-phone-volume"></i><span>Call or text <a href="tel:+19543267360">(954) 326-7360</a></span></div>
+          <div class="crow"><i class="fa-solid fa-envelope-open-text"></i><span><a href="mailto:epstein23@gmail.com">epstein23@gmail.com</a></span></div>
+        </div>
+        <div class="c-block">
+          <div class="cl">Where</div>
+          <div class="crow"><i class="fa-solid fa-location-crosshairs"></i><span>Key Largo, FL 33037. Serving the whole Upper Keys.</span></div>
+          <div class="crow"><i class="fa-solid fa-route"></i><span>Meeting dock confirmed when you book, matched to your trip and the tide.</span></div>
+        </div>
+        <p class="c-note">One boat, one captain, and a calendar that fills fast in season. If a date matters, lock it in early. Brian replies to every message himself, usually the same day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="fb-wm"><i class="fa-solid fa-anchor"></i>Captain Key Largo</a>
+        <span class="fb-tag">Fish With A Local</span>
+        <p>Backcountry, reef, and offshore charters in Key Largo with Captain Brian Epstein. Day or night, fishing or cruising, since 1976.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#trips">Dawn to Dark Trips</a></li>
+          <li><a href="#boat">The Boat</a></li>
+          <li><a href="#captain">The Captain</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Trips</h4>
+        <ul>
+          <li><a href="#trips">Backcountry &amp; Inshore</a></li>
+          <li><a href="#trips">Reef &amp; Offshore</a></li>
+          <li><a href="#trips">Night &amp; Lobster Runs</a></li>
+          <li><a href="#trips">Dine by Water Barhop</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <address>
+          <a href="tel:+19543267360">(954) 326-7360</a><br>
+          <a href="mailto:epstein23@gmail.com">epstein23@gmail.com</a><br>
+          Key Largo, FL 33037<br>
+          Part of the <a href="https://crossfiber.github.io/poppa-wahoo/">Poppa Wahoo Collective</a>
+        </address>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>&copy; 2026 Captain Key Largo. All rights reserved.</div>
+      <a class="built-by" href="https://crossdesigned.com" target="_blank" rel="noopener" aria-label="Website built by Cross Designs">Built by <img src="assets/cross-designs.png" alt="Cross Designs, South Florida web studio"></a>
+    </div>
+  </div>
+</footer>
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"LocalBusiness","name":"Captain Key Largo",
+  "image":"https://crossfiber.github.io/captain-key-largo/assets/og-share.jpg",
+  "url":"https://crossfiber.github.io/captain-key-largo/",
+  "telephone":"+1-954-326-7360","email":"epstein23@gmail.com",
+  "slogan":"Fish With A Local",
+  "description":"Captain Key Largo is Captain Brian Epstein's guided charter service in Key Largo, Florida: backcountry, reef, and offshore fishing, snorkel and eco tours, night fishing, in-season lobster and shrimp runs, bowfishing, and boat-to-bar Dine by Water cruises. Fishing the Upper Keys since 1976.",
+  "founder":{"@type":"Person","name":"Brian Epstein"},
+  "address":{"@type":"PostalAddress","addressLocality":"Key Largo","addressRegion":"FL","postalCode":"33037","addressCountry":"US"},
+  "geo":{"@type":"GeoCoordinates","latitude":25.0865,"longitude":-80.4473},
+  "areaServed":[{"@type":"City","name":"Key Largo"},{"@type":"City","name":"Tavernier"},{"@type":"City","name":"Islamorada"},{"@type":"AdministrativeArea","name":"Upper Florida Keys"}],
+  "knowsAbout":["Backcountry fishing","Inshore fishing","Offshore fishing","Reef fishing","Night fishing","Bowfishing","Spiny lobster","Shrimping","Snorkeling tours","Eco tours","Florida Keys boating"],
+  "hasOfferCatalog":{"@type":"OfferCatalog","name":"Key Largo Charter Trips","itemListElement":[
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Backcountry & Inshore Fishing Charter","description":"Light-tackle fishing on the Florida Bay flats and mangrove channels of Key Largo."}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Reef & Offshore Fishing Charter","description":"Reef and near-offshore fishing on the Atlantic side of the Upper Keys."}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Night Fishing, Lobster & Shrimp Trips","description":"Dusk to dawn fishing, bowfishing under lights, and in-season lobster and shrimp runs."}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Snorkel, Dive & Eco Tours","description":"Reef snorkeling and backcountry eco tours in Key Largo."}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Dine by Water Barhop Cruise","description":"Boat-to-bar cruise to the waterfront restaurants of the Upper Keys."}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Captain for a Day or Week","description":"Licensed 100 Ton Master captain services on your boat or his."}}
+  ]}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"Person","name":"Brian Epstein",
+  "alternateName":"Captain Key Largo",
+  "jobTitle":"Charter Captain, USCG 100 Ton Master",
+  "worksFor":{"@type":"LocalBusiness","name":"Captain Key Largo"},
+  "description":"Captain Brian Epstein has fished the Upper Florida Keys since 1976. Son of Miami Herald fishing editor Bob Epstein, he is a USCG 100 Ton Master, a tournament captain and decorated tournament angler, and co-founder of the Poppa Wahoo Collective in Islamorada.",
+  "knowsAbout":["Key Largo backcountry fishing","Reef fishing","Offshore fishing","Night fishing","Florida Keys navigation","Yacht transport"],
+  "homeLocation":{"@type":"Place","name":"Key Largo, FL"},
+  "sameAs":["https://www.linkedin.com/in/captain-brian-epstein-78b21640","https://crossfiber.github.io/poppa-wahoo/"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Do you fish backcountry or offshore?","acceptedAnswer":{"@type":"Answer","text":"Both. Brian is an Upper Keys all-around specialist. The bay boat runs the Florida Bay backcountry and mangrove flats, and it also runs the Atlantic-side reef and near-offshore blue water. Tell him what you want to catch and he will pick the side of the island and the tide."}},
+    {"@type":"Question","name":"Can we really fish at night?","acceptedAnswer":{"@type":"Answer","text":"Yes. Dusk to dawn fishing trips, bowfishing under lights, and in-season lobster and shrimp runs all happen after dark. Night trips are quieter, cooler, and often the best bite of the day."}},
+    {"@type":"Question","name":"What is the boat?","acceptedAnswer":{"@type":"Answer","text":"A 2021 Sea Hunt 25 bay boat. It drafts shallow enough for the backcountry flats and handles the reef and near-offshore water on the ocean side."}},
+    {"@type":"Question","name":"We don't fish. Is there a trip for us?","acceptedAnswer":{"@type":"Answer","text":"Plenty. Snorkel and dive runs, eco tours through the backcountry, sandbar afternoons, sunset cruises, and the Dine by Water barhop, where you hit the Upper Keys' waterfront restaurants and bars by boat."}},
+    {"@type":"Question","name":"What does a trip cost?","acceptedAnswer":{"@type":"Answer","text":"It depends on the trip, the hours, and the season, so Brian quotes each trip directly. Text or call (954) 326-7360 with what you want to do and how many people, and you will get a straight number back, usually the same day."}},
+    {"@type":"Question","name":"Where do we meet you?","acceptedAnswer":{"@type":"Answer","text":"Trips run out of Key Largo. The exact dock or ramp depends on the trip and the tide, and Brian confirms the meeting spot with you when you book."}},
+    {"@type":"Question","name":"Can you run our boat instead?","acceptedAnswer":{"@type":"Answer","text":"Yes. Brian is a USCG 100 Ton Master and hires out as your captain by the day or by the week, on his boat or yours. He also has yacht charter and transport experience throughout the Caribbean and the US East Coast."}},
+    {"@type":"Question","name":"How do we book?","acceptedAnswer":{"@type":"Answer","text":"Text or call (954) 326-7360, or send the contact form. Tell him the dates you are in the Keys, your group size, and what kind of day you are picturing."}}
+  ]
+}
+</script>
+
+<!-- JS -->
+<script>
+if ('scrollRestoration' in history) { history.scrollRestoration = 'auto'; }
+(function(){
+  if (window.location.hash) { history.replaceState(null, '', window.location.pathname); }
+  var hamburger=document.getElementById('hamburger');
+  var drawer=document.getElementById('navDrawer');
+  var overlay=document.getElementById('navOverlay');
+  var drawerClose=document.getElementById('drawerClose');
+  function openDrawer(){drawer.classList.add('open');overlay.classList.add('open');document.body.classList.add('drawer-open');drawer.setAttribute('aria-hidden','false');hamburger.setAttribute('aria-expanded','true');}
+  function closeDrawer(){drawer.classList.remove('open');overlay.classList.remove('open');document.body.classList.remove('drawer-open');drawer.setAttribute('aria-hidden','true');hamburger.setAttribute('aria-expanded','false');}
+  hamburger.addEventListener('click',openDrawer);
+  drawerClose.addEventListener('click',closeDrawer);
+  overlay.addEventListener('click',closeDrawer);
+  drawer.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeDrawer);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&drawer.classList.contains('open'))closeDrawer();});
+
+  document.querySelectorAll('a[href^="#"]').forEach(function(link){
+    link.addEventListener('click',function(e){
+      var id=link.getAttribute('href');
+      if(id.length<2)return;
+      var target=document.querySelector(id);
+      if(!target)return;
+      e.preventDefault();
+      target.scrollIntoView({behavior:'smooth',block:'start'});
+      history.replaceState(null,'',window.location.pathname);
+    });
+  });
+
+  document.querySelectorAll('.acc-head').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var item=btn.parentElement;
+      var body=item.querySelector('.acc-body');
+      var isOpen=item.classList.contains('open');
+      document.querySelectorAll('.acc-item').forEach(function(i){
+        i.classList.remove('open');
+        i.querySelector('.acc-head').setAttribute('aria-expanded','false');
+        i.querySelector('.acc-body').style.maxHeight=null;
+      });
+      if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');body.style.maxHeight=body.scrollHeight+'px';}
+    });
+  });
+
+  document.querySelectorAll('#bookForm input,#bookForm select,#bookForm textarea').forEach(function(el){
+    el.addEventListener('input',function(){var fld=el.closest('.field');if(fld)fld.classList.remove('err');});
+  });
+
+  var rsz;
+  window.addEventListener('resize',function(){
+    clearTimeout(rsz);
+    rsz=setTimeout(function(){
+      document.querySelectorAll('.acc-item.open .acc-body').forEach(function(b){b.style.maxHeight=b.scrollHeight+'px';});
+    },120);
+  });
+})();
+
+window.submitForm=function(e){
+  e.preventDefault();
+  var status=document.getElementById('formStatus');
+  var ok=true;
+  function mark(id,bad){var el=document.getElementById(id);if(el)el.classList.toggle('err',bad);if(bad)ok=false;}
+  var name=(document.getElementById('name').value||'').trim();
+  var phone=(document.getElementById('phone').value||'').trim();
+  var email=(document.getElementById('email').value||'').trim();
+  var trip=document.getElementById('trip').value;
+  var msg=(document.getElementById('message').value||'').trim();
+  mark('f-name',!name);
+  var phoneOk=phone.replace(/\D/g,'').length>=10;mark('f-phone',!phoneOk);
+  var emailOk=email!==''&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  mark('f-email',!emailOk);mark('f-trip',!trip);
+  if(!ok){status.className='form-status show error';status.textContent='Almost there. Check the highlighted fields and resend.';return false;}
+  var subject=encodeURIComponent('Trip inquiry: '+trip+' for '+name);
+  var body=encodeURIComponent('Name: '+name+'\nPhone: '+phone+'\nEmail: '+email+'\nTrip: '+trip+'\n\nDetails:\n'+(msg||'(none)'));
+  window.location.href='mailto:epstein23@gmail.com?subject='+subject+'&body='+body;
+  status.className='form-status show success';
+  status.innerHTML="Your email app just opened with everything pre-filled. Faster answer? Call or text <a href='tel:+19543267360' style='color:var(--coral-lite);font-weight:700;'>(954) 326-7360</a>.";
+  return false;
+};
+</script>
+</body>
+</html>
