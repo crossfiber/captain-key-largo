@@ -89,6 +89,14 @@ summary::-webkit-details-marker{display:none}
 summary::after{content:'+';color:var(--accd);font-weight:700;font-size:1.2rem}
 details[open] summary::after{content:'\2013'}
 details p{padding:0 4px 18px;color:var(--txs);font-size:0.97rem;line-height:1.68;max-width:64ch}
+.xlink{padding:30px 0 38px;border-top:1px solid var(--line)}
+.xlink h2{font-size:1.3rem;color:var(--dark);margin-bottom:14px}
+.xlink ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px 32px}
+.xlink li{padding:4px 0}
+.xlink a{font-size:0.94rem;font-weight:600;color:var(--accd);border-bottom:1px solid transparent}
+.xlink a:hover{border-color:var(--accd)}
+.xlink a i{font-size:0.8em;margin-right:9px}
+@media(max-width:640px){.xlink ul{grid-template-columns:1fr}}
 .related{padding:34px 0 54px;border-top:1px solid var(--line)}
 .related h2{font-size:1.3rem;color:var(--dark);margin-bottom:18px}
 .rel-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
@@ -184,6 +192,7 @@ body.modal-open{overflow:hidden}
     <h2>Quick answers</h2>
     <details><summary>How far is Key Largo from Miami?</summary><p>About an hour from downtown Miami via the Turnpike and US-1, making it the closest real Keys fishing to the city.</p></details><details><summary>Where exactly do we meet?</summary><p>Brian confirms the dock when you book, chosen for your trip and the tide. If you are staying in the Upper Keys, ask about options closer to you.</p></details><details><summary>Can we do a night trip after a Miami workday?</summary><p>That is exactly what the dusk trips are for. Drive down after work, fish the evening and night, and be back late or crash in Key Largo.</p></details>
   </section>
+  <section class="xlink"><h2>What you can fish from Miami</h2><ul><li><a href="../tarpon-fishing-key-largo/"><i class="fa-solid fa-location-arrow"></i>Tarpon Fishing in Key Largo</a></li><li><a href="../bonefish-key-largo/"><i class="fa-solid fa-location-arrow"></i>Bonefish in Key Largo</a></li><li><a href="../snook-fishing-key-largo/"><i class="fa-solid fa-location-arrow"></i>Snook in Key Largo</a></li><li><a href="../permit-fishing-key-largo/"><i class="fa-solid fa-location-arrow"></i>Permit in Key Largo</a></li><li><a href="../mangrove-snapper-key-largo/"><i class="fa-solid fa-location-arrow"></i>Mangrove Snapper in Key Largo</a></li><li><a href="../spanish-mackerel-key-largo/"><i class="fa-solid fa-location-arrow"></i>Spanish Mackerel in Key Largo</a></li><li><a href="../night-fishing-key-largo/"><i class="fa-solid fa-location-arrow"></i>Night Fishing in Key Largo</a></li><li><a href="../lobster-shrimp-trips-key-largo/"><i class="fa-solid fa-location-arrow"></i>Lobster &amp; Shrimp in Key Largo</a></li></ul></section>
   <section class="related">
     <h2>Keep planning</h2>
     <div class="rel-row"><a href="../key-largo-vs-islamorada-charters/"><i class="fa-solid fa-fish-fins"></i>Key Largo vs Islamorada</a><a href="../tarpon-fishing-key-largo/"><i class="fa-solid fa-fish-fins"></i>Tarpon</a><a href="../night-fishing-key-largo/"><i class="fa-solid fa-fish-fins"></i>Night Trips</a></div>

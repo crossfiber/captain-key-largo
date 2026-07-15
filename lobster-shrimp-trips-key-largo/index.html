@@ -89,6 +89,14 @@ summary::-webkit-details-marker{display:none}
 summary::after{content:'+';color:var(--accd);font-weight:700;font-size:1.2rem}
 details[open] summary::after{content:'\2013'}
 details p{padding:0 4px 18px;color:var(--txs);font-size:0.97rem;line-height:1.68;max-width:64ch}
+.xlink{padding:30px 0 38px;border-top:1px solid var(--line)}
+.xlink h2{font-size:1.3rem;color:var(--dark);margin-bottom:14px}
+.xlink ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px 32px}
+.xlink li{padding:4px 0}
+.xlink a{font-size:0.94rem;font-weight:600;color:var(--accd);border-bottom:1px solid transparent}
+.xlink a:hover{border-color:var(--accd)}
+.xlink a i{font-size:0.8em;margin-right:9px}
+@media(max-width:640px){.xlink ul{grid-template-columns:1fr}}
 .related{padding:34px 0 54px;border-top:1px solid var(--line)}
 .related h2{font-size:1.3rem;color:var(--dark);margin-bottom:18px}
 .rel-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
@@ -184,6 +192,7 @@ body.modal-open{overflow:hidden}
     <h2>Quick answers</h2>
     <details><summary>When is lobster season in the Keys?</summary><p>The regular season runs August through March, plus the two-day sport mini-season in late July. Book early: mini-season dates are the hottest of the year.</p></details><details><summary>Do I need experience or dive gear?</summary><p>No. Many lobster are taken in shallow water with nets and tickle sticks, and Brian teaches the technique in the first fifteen minutes.</p></details><details><summary>What about the shrimp trips?</summary><p>Winter nights, under lights, dipping shrimp as they run the tide. Cold, quiet, and absurdly rewarding when the run is on.</p></details>
   </section>
+  <section class="xlink"><h2>Coming down from the mainland?</h2><ul><li><a href="../fishing-charter-from-miami/"><i class="fa-solid fa-location-arrow"></i>Lobster &amp; Shrimp from Miami</a></li></ul></section>
   <section class="related">
     <h2>Keep planning</h2>
     <div class="rel-row"><a href="../night-fishing-key-largo/"><i class="fa-solid fa-fish-fins"></i>Night Fishing</a><a href="../mangrove-snapper-key-largo/"><i class="fa-solid fa-fish-fins"></i>Mangrove Snapper</a><a href="../key-largo-charter-cost/"><i class="fa-solid fa-fish-fins"></i>How Pricing Works</a></div>
