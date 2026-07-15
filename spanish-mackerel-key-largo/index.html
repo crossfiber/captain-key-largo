@@ -97,6 +97,14 @@ details p{padding:0 4px 18px;color:var(--txs);font-size:0.97rem;line-height:1.68
 .rel-row a i{color:var(--accd);margin-right:9px;font-size:0.85em}
 @media(max-width:700px){.rel-row{grid-template-columns:1fr}}
 footer{background:var(--dark);color:rgba(255,255,255,0.72);padding:38px 0 24px}
+.f-dir{max-width:980px;margin:0 auto 26px;padding:0 26px 26px;border-bottom:1px solid rgba(255,255,255,0.12);display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.f-dir h4{font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--accl);margin-bottom:10px;font-family:var(--bf)}
+.f-dir ul{list-style:none;columns:1}
+.f-dir li{padding:3px 0}
+.f-dir a{font-size:0.85rem;color:rgba(255,255,255,0.75)}
+.f-dir a:hover{color:var(--accl)}
+.f-dir a.cur{color:#fff;font-weight:700}
+@media(max-width:700px){.f-dir{grid-template-columns:1fr 1fr;gap:18px}}
 .f-in{max-width:980px;margin:0 auto;padding:0 26px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;font-size:0.85rem}
 .f-in a{color:#fff;font-weight:600}
 .f-in a:hover{color:var(--accl)}
@@ -183,6 +191,7 @@ body.modal-open{overflow:hidden}
 </div>
 
 <footer>
+  <div class="f-dir"><div><h4>Target species</h4><ul><li><a href="../tarpon-fishing-key-largo/">Tarpon Fishing</a></li><li><a href="../bonefish-key-largo/">Bonefish</a></li><li><a href="../snook-fishing-key-largo/">Snook</a></li><li><a href="../permit-fishing-key-largo/">Permit</a></li><li><a href="../mangrove-snapper-key-largo/">Mangrove Snapper</a></li><li><a href="../spanish-mackerel-key-largo/" class="cur">Spanish Mackerel</a></li></ul></div><div><h4>Trips &amp; plans</h4><ul><li><a href="../">Home</a></li><li><a href="../night-fishing-key-largo/">Night Fishing</a></li><li><a href="../lobster-shrimp-trips-key-largo/">Lobster &amp; Shrimp</a></li><li><a href="../fishing-charter-from-miami/">From Miami</a></li><li><a href="../key-largo-vs-islamorada-charters/">Key Largo vs Islamorada</a></li><li><a href="../key-largo-charter-cost/">How Pricing Works</a></li></ul></div><div><h4>The captain</h4><ul><li><a href="../#boat">The Boat</a></li><li><a href="../#captain">The Captain</a></li><li><a href="../#trips">Dawn to Dark Trips</a></li><li><a href="../#faq">FAQ</a></li></ul></div></div>
   <div class="f-in">
     <div>&copy; 2026 Captain Key Largo &middot; <a href="../">Home</a> &middot; <a href="tel:+19543267360">(954) 326-7360</a></div>
     <a class="built-by" href="https://crossdesigned.com" target="_blank" rel="noopener" aria-label="Website built by Cross Designs">Built by <img src="../assets/cross-designs.png" alt="Cross Designs"></a>
