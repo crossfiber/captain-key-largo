@@ -718,7 +718,20 @@ footer{background:#081724;color:rgba(244,239,230,0.72);padding:62px 0 28px}
 <script>
 if ('scrollRestoration' in history) { history.scrollRestoration = 'auto'; }
 (function(){
-  if (window.location.hash) { history.replaceState(null, '', window.location.pathname); }
+  if (window.location.hash && window.location.hash.length > 1) {
+    var landTarget = document.querySelector(window.location.hash);
+    history.replaceState(null, '', window.location.pathname);
+    if (landTarget) {
+      var landStop = false;
+      ['wheel','touchstart','keydown'].forEach(function(ev){ window.addEventListener(ev, function(){ landStop = true; }, {passive:true, once:true}); });
+      landTarget.scrollIntoView({behavior:'auto',block:'start'});
+      var landTries = 0;
+      var landIv = setInterval(function(){
+        if (landStop || ++landTries > 10) { clearInterval(landIv); return; }
+        landTarget.scrollIntoView({behavior:'auto',block:'start'});
+      }, 140);
+    }
+  }
   var hamburger=document.getElementById('hamburger');
   var drawer=document.getElementById('navDrawer');
   var overlay=document.getElementById('navOverlay');
