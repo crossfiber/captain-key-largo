@@ -46,9 +46,14 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);back
 .nav-phone i{color:var(--accd);margin-right:6px}
 .nav-cta{padding:10px 18px;background:var(--acc);color:#fff;font-weight:700;font-size:0.74rem;letter-spacing:0.07em;text-transform:uppercase}
 @media(max-width:900px){.nav-links{display:none}}
-@media(max-width:640px){.nav-phone span{display:none}.nav-cta{display:none}}
-.hamburger{display:none;width:42px;height:42px;background:transparent;border:1.5px solid var(--line);cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0}
-.hamburger span{display:block;width:20px;height:2.5px;background:var(--dark)}
+@media(max-width:640px){
+  .nav-cta{display:none}
+  .nav-phone{width:44px;height:44px;background:var(--acc);justify-content:center;border-radius:2px;flex-shrink:0}
+  .nav-phone span{display:none}
+  .nav-phone i{color:var(--dark);margin:0;font-size:1rem}
+}
+.hamburger{display:none;width:44px;height:44px;background:transparent;border:1.5px solid var(--line);border-radius:2px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0}
+.hamburger span{display:block;width:22px;height:2.5px;background:var(--dark)}
 @media(max-width:900px){.hamburger{display:inline-flex}}
 .nav-drawer{position:fixed;top:0;right:0;width:330px;max-width:88vw;height:100dvh;background:var(--dark);color:#fff;z-index:1001;transform:translateX(100%);visibility:hidden;transition:transform .32s cubic-bezier(.2,.8,.2,1),visibility .32s;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top)}
 .nav-drawer.open{transform:translateX(0);visibility:visible}
@@ -146,8 +151,11 @@ footer{background:var(--dark);color:rgba(255,255,255,0.72);padding:38px 0 24px}
 .f-dir a:hover{color:var(--accl)}
 .f-dir a.cur{color:#fff;font-weight:700}
 @media(max-width:700px){.f-dir{grid-template-columns:1fr 1fr;gap:18px}}
-.f-in{max-width:980px;margin:0 auto;padding:0 26px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;font-size:0.85rem}
-.f-in a{color:#fff;font-weight:600}
+.f-in{max-width:980px;margin:0 auto;padding:0 26px;display:flex;flex-direction:column;gap:13px;font-size:0.85rem}
+.f-in .fb-copy{color:rgba(255,255,255,0.55)}
+.f-in .fb-row{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.f-in .fb-links{display:flex;gap:24px}
+.f-in a{color:#fff;font-weight:600;padding:6px 0}
 .f-in a:hover{color:var(--accl)}
 .built-by{display:inline-flex;align-items:center;gap:8px;font-size:0.8rem;color:rgba(255,255,255,0.6)}
 .built-by img{height:17px;width:auto;opacity:0.85}
@@ -246,8 +254,11 @@ footer{background:var(--dark);color:rgba(255,255,255,0.72);padding:38px 0 24px}
   </div>
   <div class="f-dir"><div><h4>Target species</h4><ul><li><a href="../tarpon-fishing-key-largo/">Tarpon Fishing</a></li><li><a href="../bonefish-key-largo/">Bonefish</a></li><li><a href="../snook-fishing-key-largo/">Snook</a></li><li><a href="../permit-fishing-key-largo/">Permit</a></li><li><a href="../mangrove-snapper-key-largo/">Mangrove Snapper</a></li><li><a href="../spanish-mackerel-key-largo/">Spanish Mackerel</a></li></ul></div><div><h4>Trips &amp; plans</h4><ul><li><a href="../">Home</a></li><li><a href="../night-fishing-key-largo/" class="cur">Night Fishing</a></li><li><a href="../lobster-shrimp-trips-key-largo/">Lobster &amp; Shrimp</a></li><li><a href="../fishing-charter-from-miami/">From Miami</a></li><li><a href="../key-largo-vs-islamorada-charters/">Key Largo vs Islamorada</a></li><li><a href="../key-largo-charter-cost/">How Pricing Works</a></li></ul></div><div><h4>The captain</h4><ul><li><a href="../#boat">The Boat</a></li><li><a href="../#captain">The Captain</a></li><li><a href="../#trips">Dawn to Dark Trips</a></li><li><a href="../#faq">FAQ</a></li></ul></div><div><h4>Poppa Wahoo &middot; Islamorada</h4><ul><li><a href="https://crossfiber.github.io/poppa-wahoo/">The Collective</a></li><li><a href="https://crossfiber.github.io/poppa-wahoo/deep-sea-fishing-islamorada/">Deep Sea Charters</a></li><li><a href="https://crossfiber.github.io/poppa-wahoo/swordfish-charters-islamorada/">Overnight Swordfish</a></li><li><a href="https://crossfiber.github.io/poppa-wahoo/sunset-cruise-islamorada/">Sunset Cruises</a></li></ul></div></div>
   <div class="f-in">
-    <div>&copy; 2026 Captain Key Largo &middot; <a href="../">Home</a> &middot; <a href="tel:+19543267360">(954) 326-7360</a></div>
-    <a class="built-by" href="https://crossdesigned.com" target="_blank" rel="noopener" aria-label="Website built by Cross Designs">Built by <img src="../assets/cross-designs.png" alt="Cross Designs"></a>
+    <div class="fb-copy">&copy; 2026 Captain Key Largo. Key Largo, FL.</div>
+    <div class="fb-row">
+      <div class="fb-links"><a href="../">Home</a><a href="tel:+19543267360">(954) 326-7360</a></div>
+      <a class="built-by" href="https://crossdesigned.com" target="_blank" rel="noopener" aria-label="Website built by Cross Designs">Built by <img src="../assets/cross-designs.png" alt="Cross Designs"></a>
+    </div>
   </div>
 </footer>
 
