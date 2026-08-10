@@ -26,7 +26,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#F4EFE6;--bg2:#E9E2D2;--dark:#0B1E2E;--dark2:#122A3E;--acc:#DE5827;--accd:#BE4519;--accl:#F09A72;--tx:#1B2833;--txs:#54626E;--line:rgba(27,40,51,0.15); --hf:'Barlow Condensed',sans-serif;--bf:'Barlow',system-ui,sans-serif;--nav-h:72px}
+:root{--bg:#F4EFE6;--bg2:#E9E2D2;--dark:#0B1E2E;--dark2:#122A3E;--acc:#DE5827;--accd:#BE4519;--accl:#F09A72;--tx:#1B2833;--txs:#54626E;--line:rgba(27,40,51,0.15);--mar:#BE4519;--marl:#F09A72; --hf:'Barlow Condensed',sans-serif;--bf:'Barlow',system-ui,sans-serif;--nav-h:72px}
 @media(max-width:768px){:root{--nav-h:60px}}
 html{scroll-behavior:smooth;scroll-padding-top:86px}
 body{font-family:var(--bf);color:var(--tx);background:var(--bg);line-height:1.66;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -63,7 +63,7 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);back
 .logo-pill{display:inline-flex;align-items:center;background:#fff;border-radius:999px;padding:7px 16px}
 .logo-pill img{height:28px;width:auto;display:block}
 .drawer-close{background:none;border:none;font-size:1.35rem;color:#fff;cursor:pointer;width:40px;height:40px}
-.drawer-eyebrow{padding:20px 26px 4px;font-size:0.7rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--accl)}
+.drawer-eyebrow{padding:20px 26px 4px;font-size:0.7rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--marl)}
 .drawer-links{display:flex;flex-direction:column;flex:1;overflow-y:auto;min-height:0;padding:2px 0 8px}
 .drawer-links a{padding:16px 26px;color:#fff;font-family:var(--hf);font-weight:700;font-size:1.5rem;line-height:1.15;text-transform:uppercase;transition:color .2s,padding-left .2s}
 .drawer-links a:hover{color:var(--accl);padding-left:34px}
@@ -75,17 +75,17 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);back
 .drawer-ov.show{opacity:1;visibility:visible}
 body.drawer-open{overflow:hidden}
 .crumbs{padding:calc(var(--nav-h) + 26px) 0 0;font-size:0.8rem;color:var(--txs)}
-.crumbs a{color:var(--accd);font-weight:600}
+.crumbs a{color:var(--mar);font-weight:600}
 .crumbs i{font-size:0.7em;margin:0 8px;opacity:0.6}
 .hero{padding:18px 0 34px;border-bottom:1px solid var(--line)}
-.kick{display:block;font-size:0.75rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--accd);margin-bottom:12px}
+.kick{display:block;font-size:0.75rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--mar);margin-bottom:12px}
 .hero h1{font-size:clamp(1.9rem,4.6vw,3rem);color:var(--dark);max-width:22ch;margin-bottom:14px}
 .hero h1 em{font-style:normal;color:var(--acc);font-weight:500}
 .hero .lede{font-size:1.06rem;color:var(--txs);max-width:66ch;line-height:1.6}
 .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-bottom:1px solid var(--line)}
 .fact{padding:20px 20px 20px 0}
 .fact:not(:first-child){padding-left:20px;border-left:1px solid var(--line)}
-.fact b{display:block;font-size:0.68rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--accd);margin-bottom:6px}
+.fact b{display:block;font-size:0.68rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--mar);margin-bottom:6px}
 .fact span{font-family:var(--hf);font-weight:600;font-size:1.06rem;color:var(--dark);line-height:1.3;text-transform:uppercase}
 @media(max-width:760px){.facts{grid-template-columns:1fr 1fr}.fact:nth-child(3){padding-left:0;border-left:none}.fact{padding:14px 12px 14px 0}}
 .body-grid{display:grid;grid-template-columns:1.25fr 0.75fr;gap:44px;padding:44px 0;align-items:start}
@@ -95,14 +95,14 @@ body.drawer-open{overflow:hidden}
 .prose h2{font-size:1.5rem;color:var(--dark);margin:26px 0 12px}
 .side-img{width:100%;border:1px solid var(--line);margin-bottom:16px}
 .side-card{background:var(--dark);color:#fff;padding:24px}
-.side-card .sc-k{display:block;font-size:0.68rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--accl);margin-bottom:8px}
+.side-card .sc-k{display:block;font-size:0.68rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--marl);margin-bottom:8px}
 .side-card .sc-p{font-family:var(--hf);font-weight:600;font-size:1.7rem;line-height:1;margin-bottom:6px}
 .side-card .sc-m{font-size:0.85rem;color:rgba(255,255,255,0.72);margin-bottom:16px}
 .side-card .btn{width:100%}
 .side-card .sc-tel{display:block;text-align:center;margin-top:12px;font-weight:700;font-size:0.92rem;color:#fff}
 .side-card .sc-tel i{color:var(--accl);margin-right:7px}
 .rtable{width:100%;border-collapse:collapse;margin:8px 0 20px;font-size:0.95rem}
-.rtable th{text-align:left;font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--accd);padding:10px 12px;border-bottom:2px solid var(--dark)}
+.rtable th{text-align:left;font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--mar);padding:10px 12px;border-bottom:2px solid var(--dark)}
 .rtable td{padding:12px;border-bottom:1px solid var(--line);color:var(--txs)}
 .rtable td:first-child{font-weight:600;color:var(--dark)}
 .rtable td:last-child{font-family:var(--hf);font-weight:600;color:var(--dark);white-space:nowrap}
@@ -119,8 +119,8 @@ details p{padding:0 4px 18px;color:var(--txs);font-size:0.97rem;line-height:1.68
 .xlink h2{font-size:1.3rem;color:var(--dark);margin-bottom:14px}
 .xlink ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px 32px}
 .xlink li{padding:4px 0}
-.xlink a{font-size:0.94rem;font-weight:600;color:var(--accd);border-bottom:1px solid transparent}
-.xlink a:hover{border-color:var(--accd)}
+.xlink a{font-size:0.94rem;font-weight:600;color:var(--mar);border-bottom:1px solid transparent}
+.xlink a:hover{border-color:var(--mar)}
 .xlink a i{font-size:0.8em;margin-right:9px}
 @media(max-width:640px){.xlink ul{grid-template-columns:1fr}}
 .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0 26px}
@@ -138,7 +138,7 @@ footer{background:var(--dark);color:rgba(255,255,255,0.72);padding:52px 0 24px}
 .f-wrap{max-width:1140px;margin:0 auto;padding:0 26px}
 .foot-signoff{margin-bottom:30px;padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,0.12)}
 .foot-signoff p{font-family:var(--hf);font-style:italic;font-weight:700;font-size:clamp(1.3rem,2.6vw,1.9rem);line-height:1.3;color:#fff;max-width:28ch}
-.foot-signoff p b{font-style:italic;color:var(--accl)}
+.foot-signoff p b{font-style:italic;color:var(--marl)}
 .f-cols{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:34px 30px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,0.12);margin-bottom:20px}
 .f-brandcell{grid-row:span 2;padding-right:10px}
 .f-brandcell .logo-pill{margin-bottom:14px}
@@ -146,9 +146,9 @@ footer{background:var(--dark);color:rgba(255,255,255,0.72);padding:52px 0 24px}
 .fb-contact{font-style:normal;font-size:0.9rem;line-height:1.8;margin-bottom:14px}
 .fb-contact a{font-weight:600;color:#fff}
 .fb-contact a:hover{color:var(--accl)}
-.foot-social{display:flex;gap:16px}
-.foot-social a{color:rgba(255,255,255,0.72);font-size:1.05rem;transition:color .2s}
-.foot-social a:hover{color:var(--accl)}
+.social-line{font-size:0.9rem;display:flex;gap:10px;color:rgba(255,255,255,0.4)}
+.social-line a{font-weight:700;color:#fff;transition:color .2s}
+.social-line a:hover{color:var(--marl)}
 .ft-brand{font-family:var(--hf);font-weight:700;font-size:1.3rem;color:#fff;text-transform:uppercase;margin-bottom:6px}
 .ft-line{font-size:0.9rem;color:rgba(255,255,255,0.65);margin-bottom:14px;line-height:1.6}
 .f-grp h4{font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:10px;font-family:var(--bf)}
@@ -243,7 +243,7 @@ footer{background:var(--dark);color:rgba(255,255,255,0.72);padding:52px 0 24px}
         <span class="sc-k">After dark</span>
         <span class="sc-p">Quoted per trip</span>
         <span class="sc-m">Text Brian your dates for a number</span>
-        <a href="tel:+19543267360" class="btn"><i class="fa-solid fa-phone-volume"></i> Call to Plan a Day</a>
+        <a href="tel:+19543267360" class="btn">Call to Plan a Day</a>
         <a href="tel:+19543267360" class="sc-tel"><i class="fa-solid fa-phone-volume"></i>(954) 326-7360</a>
       </div>
     </aside>
