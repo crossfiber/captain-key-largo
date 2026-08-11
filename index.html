@@ -46,10 +46,11 @@
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
   /* Palette sourced from the site's own photography: dusk water navy, sunset coral, sun-bleached sand. See design-direction.md */
-  --night:#0B1E2E;--night-2:#122A3E;--night-3:#1A3550;
-  --sand:#F4EFE6;--sand-2:#E9E2D2;--white:#FFFFFF;
-  --text:#1B2833;--text-soft:#54626E;
-  --coral:#DE5827;--coral-d:#BE4519;--coral-lite:#F09A72;
+  --night:#0D1B33;--night-2:#14264A;--night-3:#1E3560;
+  --marlin:#3364AC;--marlin-lite:#8FA9D8;
+  --sand:#F8F5EE;--sand-2:#EFE8D9;--white:#FFFFFF;
+  --text:#182338;--text-soft:#4F5B70;
+  --coral:#C29A3B;--coral-d:#8F6D18;--coral-lite:#D9BC72;
   --line:rgba(27,40,51,0.15);--line-soft:rgba(27,40,51,0.09);
   --line-d:rgba(244,239,230,0.18);--line-d-soft:rgba(244,239,230,0.10);
   --nav-h:72px;--nav-h-sm:60px;
@@ -66,8 +67,8 @@ img{max-width:100%;display:block}
 .kicker::before{content:'';width:26px;height:3px;background:var(--coral)}
 
 /* BUTTONS */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:11px;padding:15px 28px;background:var(--coral);color:#fff;font-family:'Barlow',sans-serif;font-weight:700;font-size:0.86rem;letter-spacing:0.07em;text-transform:uppercase;border:none;cursor:pointer;transition:background .18s,transform .15s,box-shadow .2s;box-shadow:0 6px 18px rgba(222,88,39,0.28)}
-.btn:hover{background:var(--coral-d);transform:translateY(-2px);box-shadow:0 10px 24px rgba(222,88,39,0.36)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:11px;padding:15px 28px;background:var(--coral);color:var(--night);font-family:'Barlow',sans-serif;font-weight:700;font-size:0.86rem;letter-spacing:0.07em;text-transform:uppercase;border:none;cursor:pointer;transition:background .18s,transform .15s,box-shadow .2s;box-shadow:0 6px 18px rgba(168,129,31,0.25)}
+.btn:hover{background:var(--coral-d);transform:translateY(-2px);box-shadow:0 10px 24px rgba(194,154,59,0.36)}
 .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.55);box-shadow:none}
 .btn-ghost:hover{background:#fff;color:var(--night);border-color:#fff;box-shadow:none}
 .btn-night{background:transparent;color:var(--night);border:1.5px solid var(--night);box-shadow:none}
@@ -91,7 +92,7 @@ nav.site-nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h)
 .nav-phone{font-weight:700;font-size:0.96rem;color:var(--night);display:inline-flex;align-items:center;gap:8px}
 .nav-phone i{color:var(--coral);font-size:0.9em}
 .nav-phone:hover{color:var(--coral)}
-.nav-cta{padding:11px 20px;background:var(--coral);color:#fff;font-weight:700;font-size:0.76rem;letter-spacing:0.08em;text-transform:uppercase;transition:background .18s}
+.nav-cta{padding:11px 20px;background:var(--coral);color:var(--night);font-weight:700;font-size:0.76rem;letter-spacing:0.08em;text-transform:uppercase;transition:background .18s}
 .nav-cta:hover{background:var(--coral-d)}
 @media(max-width:1020px){.nav-links,.nav-right .nav-phone,.nav-right .nav-cta{display:none}}
 .mobile-actions{display:none;gap:10px;align-items:center}
@@ -109,7 +110,7 @@ nav.site-nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h)
 .drawer-header .dh-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:0.05em;text-transform:uppercase;color:var(--sand)}
 .drawer-close{background:none;border:none;font-size:1.4rem;color:var(--sand);cursor:pointer;width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center}
 .drawer-close:hover{color:var(--coral-lite)}
-.drawer-eyebrow{padding:20px 26px 4px;font-size:0.7rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--coral-lite)}
+.drawer-eyebrow{padding:20px 26px 4px;font-size:0.7rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--marlin-lite)}
 .drawer-links{display:flex;flex-direction:column;flex:1;overflow-y:auto;min-height:0;padding:8px 0}
 .drawer-links a{padding:16px 22px;color:var(--sand);font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:1.3rem;letter-spacing:0.04em;text-transform:uppercase;border-bottom:1px solid var(--line-d-soft);transition:color .2s,background .2s,padding-left .2s}
 .drawer-links a span{color:var(--coral-lite);font-size:0.78em;margin-right:10px}
@@ -128,7 +129,7 @@ body.drawer-open .mobile-actions{visibility:hidden}
 .hero::before{content:'';position:absolute;inset:0;background-image:url('assets/sunset-water.jpg');background-size:cover;background-position:center 42%;z-index:0}
 .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,30,46,0.68) 0%,rgba(11,30,46,0.24) 36%,rgba(11,30,46,0.5) 66%,rgba(11,30,46,0.94) 100%);z-index:1}
 .hero-inner{position:relative;z-index:2;width:100%;max-width:1240px;margin:0 auto;padding:0 40px;color:#fff}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:0.78rem;font-weight:700;letter-spacing:0.24em;text-transform:uppercase;color:var(--coral-lite);margin-bottom:22px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:0.78rem;font-weight:700;letter-spacing:0.24em;text-transform:uppercase;color:var(--marlin-lite);margin-bottom:22px}
 .hero h1{font-size:clamp(2.5rem,6vw,4.9rem);color:#fff;max-width:16ch;margin-bottom:20px}
 .hero h1 em{font-style:normal;color:var(--coral-lite)}
 .hero .lede{font-size:clamp(1.02rem,1.5vw,1.24rem);font-weight:400;color:rgba(255,255,255,0.88);max-width:56ch;margin-bottom:30px;line-height:1.55}
@@ -170,32 +171,6 @@ body.drawer-open .mobile-actions{visibility:hidden}
 @media(max-width:860px){.statement{padding:60px 0}.statement-grid{grid-template-columns:1fr;gap:18px}.statement .st-body p{font-size:1rem}}
 
 /* DAY RAIL (signature) */
-/* BOOKING WIZARD */
-.bw-prog{display:none}
-form.bw-on .bw-prog{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
-.bw-st{font-size:0.72rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--coral-lite)}
-.bw-dots{display:flex;gap:7px}
-.bw-dots i{width:22px;height:3px;background:rgba(244,239,230,0.25);border-radius:2px;transition:background .3s}
-.bw-dots i.on{background:var(--coral)}
-form.bw-on .bw-step{display:none}
-form.bw-on .bw-step.on{display:block}
-.bw-rows{border-top:1px solid rgba(244,239,230,0.16)}
-.field label.bw-row{position:relative;display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding:15px 4px 15px 14px;margin:0;border-bottom:1px solid rgba(244,239,230,0.16);border-left:3px solid transparent;cursor:pointer;text-transform:none;letter-spacing:normal;font-size:1rem;font-weight:400;color:var(--sand);transition:border-color .2s,background .2s,padding-left .2s}
-.bw-row input{position:absolute;opacity:0;pointer-events:none}
-.bw-row b{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.24rem;letter-spacing:0.01em;color:var(--sand);line-height:1.25}
-.bw-row em{font-style:normal;font-weight:600;font-size:0.92rem;color:rgba(244,239,230,0.65);white-space:nowrap}
-.bw-row:hover{background:rgba(244,239,230,0.04)}
-.bw-row.sel{border-left-color:var(--coral);background:rgba(244,239,230,0.05)}
-.bw-row.sel b{color:#fff}
-.bw-row.sel em{color:var(--coral-lite)}
-.bw-nav{display:flex;gap:12px;margin-top:20px}
-.bw-ghost{background:transparent;border:1.5px solid rgba(244,239,230,0.4);color:var(--sand);box-shadow:none}
-.bw-ghost:hover{background:transparent;border-color:var(--coral-lite);color:var(--coral-lite)}
-.bw-back{display:none}
-form.bw-on .bw-back{display:inline-flex}
-.bw-call{margin-top:16px;font-size:0.88rem;color:rgba(244,239,230,0.65)}
-.bw-call a{color:var(--coral-lite);font-weight:700}
-.field .opt{font-weight:600;font-size:0.68rem;letter-spacing:0.08em;color:rgba(244,239,230,0.5);margin-left:6px;text-transform:none}
 /* TRIPS LEDGER */
 .trips{background:var(--white);border-top:1px solid var(--line);padding:92px 0 96px}
 .trips-head{margin-bottom:34px;max-width:62ch}
@@ -205,7 +180,7 @@ form.bw-on .bw-back{display:inline-flex}
 .trip-row{display:grid;grid-template-columns:1fr auto;gap:20px 34px;align-items:center;padding:24px 0;border-bottom:1px solid var(--line)}
 .tr-body h3{font-size:1.4rem;color:var(--night);margin-bottom:7px;line-height:1.2}
 .tr-body p{font-size:0.95rem;color:var(--text-soft);line-height:1.6;max-width:58ch}
-.tr-meta{display:block;font-size:0.74rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--coral-d,#BE4519);margin-bottom:6px}
+.tr-meta{display:block;font-size:0.74rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--marlin);margin-bottom:6px}
 .tr-buy{display:flex;flex-direction:column;align-items:flex-end;gap:12px;flex-shrink:0}
 .tr-price{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.9rem;color:var(--night);line-height:1;white-space:nowrap}
 .tr-book{padding:12px 24px;font-size:0.78rem}
@@ -221,9 +196,9 @@ form.bw-on .bw-back{display:inline-flex}
   .tc-tile{display:flex;flex-direction:column;gap:3px;padding:14px 13px;background:var(--white);border:1px solid var(--line);transition:border-color .2s}
   .tc-tile:active{border-color:var(--coral)}
   .tc-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.02rem;line-height:1.2;text-transform:uppercase;color:var(--night)}
-  .tc-price{font-weight:700;font-size:0.9rem;color:var(--coral-d,#BE4519)}
+  .tc-price{font-weight:700;font-size:0.9rem;color:var(--coral-d,#8F6D18)}
   .tc-meta{font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-soft)}
-  .tc-book{grid-column:1/-1;display:inline-flex;align-items:center;justify-content:center;padding:15px;background:var(--coral);color:#fff;font-weight:700;font-size:0.82rem;letter-spacing:0.07em;text-transform:uppercase;margin-top:4px}
+  .tc-book{grid-column:1/-1;display:inline-flex;align-items:center;justify-content:center;padding:15px;background:var(--coral);color:var(--night);font-weight:700;font-size:0.82rem;letter-spacing:0.07em;text-transform:uppercase;margin-top:4px}
 }
 /* FLEET */
 .fleet{background:var(--sand-2);padding:88px 0 96px}
@@ -235,7 +210,7 @@ form.bw-on .bw-back{display:inline-flex}
 .boat-card:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(27,40,51,0.12)}
 .bc-photo{height:250px;background-size:cover;background-position:center}
 .bc-body{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1}
-.bc-role{font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--coral-d,#BE4519);margin-bottom:7px}
+.bc-role{font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--marlin);margin-bottom:7px}
 .bc-body h3{font-size:1.45rem;color:var(--night);margin-bottom:9px}
 .bc-body p{font-size:0.94rem;color:var(--text-soft);line-height:1.6}
 @media(max-width:1000px){.fleet{padding:58px 0 64px}.fleet-head{grid-template-columns:1fr;gap:8px;margin-bottom:26px}.bc-photo{height:200px}}
@@ -244,7 +219,7 @@ form.bw-on .bw-back{display:inline-flex}
 .captain-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:64px;align-items:start}
 .captain-photo{position:relative}
 .captain-photo .cp-img{aspect-ratio:4/4.4;background-image:url('assets/captain-brian.jpg');background-size:cover;background-position:center 20%}
-.captain-photo .cp-tag{position:absolute;left:22px;bottom:-20px;background:var(--coral);color:#fff;padding:13px 20px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:0.05em;text-transform:uppercase;box-shadow:0 12px 28px rgba(222,88,39,0.35)}
+.captain-photo .cp-tag{position:absolute;left:22px;bottom:-20px;background:var(--coral);color:#fff;padding:13px 20px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:0.05em;text-transform:uppercase;box-shadow:0 12px 28px rgba(194,154,59,0.35)}
 .captain-copy h2{font-size:clamp(2rem,3.8vw,3.2rem);color:var(--night);margin-bottom:18px;max-width:16ch}
 .captain-copy h2 em{font-style:normal;color:var(--coral)}
 .captain-copy p{font-size:1.05rem;color:var(--text-soft);line-height:1.72;margin-bottom:16px}
@@ -272,39 +247,27 @@ form.bw-on .bw-back{display:inline-flex}
 @media(max-width:880px){.faq{padding:60px 0}.faq-grid{grid-template-columns:1fr;gap:26px}.acc-head{padding:17px 4px;font-size:0.99rem}}
 
 /* CONTACT */
-.contact{padding:104px 0;background:var(--night);color:var(--sand)}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-.contact-left h2{font-size:clamp(1.9rem,3.4vw,2.8rem);color:#fff;margin-bottom:14px}
-.contact-left h2 em{font-style:normal;color:var(--coral-lite)}
-.contact-left .csub{color:rgba(244,239,230,0.76);font-size:1.02rem;line-height:1.6;margin-bottom:30px;max-width:44ch}
+.contact{background:var(--navy,var(--night));color:var(--ivory,var(--sand));padding:92px 0 88px}
+.contact-block{max-width:680px;margin:0 auto}
+.contact-block h2{font-size:clamp(1.9rem,3.6vw,2.9rem);color:#fff;margin-bottom:14px}
+.csub{font-size:1.02rem;line-height:1.7;color:rgba(255,255,255,0.72);margin-bottom:36px;max-width:60ch}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}
 .field{margin-bottom:22px}
-.field label{display:block;font-size:0.74rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral-lite);margin-bottom:9px}
-.field input,.field select,.field textarea{width:100%;padding:11px 2px;border:none;border-bottom:1.5px solid rgba(244,239,230,0.3);background:transparent;color:#fff;font-family:'Barlow',sans-serif;font-size:1.02rem;transition:border-color .2s}
-.field input::placeholder,.field textarea::placeholder{color:rgba(244,239,230,0.4)}
-.field select{color:#fff}
-.field select option{color:var(--night)}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--coral-lite)}
-.field textarea{resize:vertical;min-height:84px}
-.field.err input,.field.err select,.field.err textarea{border-color:#E88}
-.field .msg{display:none;color:#F2A896;font-size:0.82rem;margin-top:7px}
+.field label{display:block;font-size:0.8rem;font-weight:600;color:rgba(255,255,255,0.72);margin-bottom:8px}
+.field input,.field textarea{width:100%;background:transparent;border:none;border-bottom:1.5px solid rgba(255,255,255,0.22);color:#fff;font-family:inherit;font-size:1.02rem;padding:10px 2px;transition:border-color .2s}
+.field textarea{min-height:96px;resize:vertical;line-height:1.6}
+.field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,0.32)}
+.field input:focus,.field textarea:focus{outline:none;border-bottom-color:var(--coral-lite)}
+.field .msg{display:none;font-size:0.84rem;color:#E8927F;margin-top:7px}
+.field.err input,.field.err textarea{border-bottom-color:#E8927F}
 .field.err .msg{display:block}
-.frow{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.contact form .btn{margin-top:6px}
-.form-status{margin-top:16px;padding:13px 16px;font-size:0.94rem;display:none;border-left:3px solid var(--coral-lite)}
+.contact-block .btn{margin-top:6px}
+.form-status{display:none;margin-top:18px;font-size:0.95rem;line-height:1.6;padding-left:14px;border-left:2px solid var(--coral-lite)}
 .form-status.show{display:block}
-.form-status.success{background:rgba(240,154,114,0.13);color:#F6CDB8}
-.form-status.error{background:rgba(232,136,136,0.12);color:#F2B2A4;border-left-color:#E88}
-.contact-right{border-left:1px solid var(--line-d);padding-left:56px}
-.contact .cl{font-size:0.74rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral-lite);margin-bottom:12px}
-.crow{display:flex;gap:15px;align-items:baseline;padding:9px 0;font-size:1rem;color:rgba(244,239,230,0.87);line-height:1.55}
-.crow i{color:var(--coral-lite);width:18px;text-align:center;flex-shrink:0}
-.crow a{font-weight:700;color:#fff}
-.crow a:hover{color:var(--coral-lite)}
-.c-block{padding-bottom:22px;border-bottom:1px solid var(--line-d-soft);margin-bottom:24px}
-.c-note{font-size:0.94rem;color:rgba(244,239,230,0.64);line-height:1.6}
-@media(max-width:900px){.contact{padding:60px 0}.contact-grid{grid-template-columns:1fr;gap:38px}.contact-right{border-left:none;border-top:1px solid var(--line-d);padding-left:0;padding-top:26px}}
-@media(max-width:460px){.frow{grid-template-columns:1fr;gap:0}}
-
+.form-status.error{border-left-color:#E8927F;color:#E8927F}
+.c-direct{margin-top:26px;font-size:0.92rem;color:rgba(255,255,255,0.6)}
+.c-direct a{color:var(--coral-lite);font-weight:700}
+@media(max-width:640px){.contact{padding:64px 0 72px}.frow{grid-template-columns:1fr;gap:0}}
 /* FOOTER */
 footer{background:#081724;color:rgba(244,239,230,0.72);padding:62px 0 28px}
 .f-cols{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:34px 30px;padding-bottom:30px;border-bottom:1px solid var(--line-d-soft,rgba(244,239,230,0.14))}
@@ -344,6 +307,41 @@ footer{background:#081724;color:rgba(244,239,230,0.72);padding:62px 0 28px}
 @media(max-width:760px){.foot-signoff{margin-bottom:30px;padding-bottom:26px}}
 
 /* BOOKING MODAL */
+body.modal-open{overflow:hidden}
+.bk-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.72);z-index:2000;display:none;align-items:center;justify-content:center;padding:20px 16px;overscroll-behavior:contain}
+.bk-overlay.open{display:flex}
+.bk-modal{background:var(--bg);width:100%;max-width:800px;box-shadow:0 44px 100px rgba(0,0,0,0.5);max-height:calc(100dvh - 36px);overflow-y:auto;overscroll-behavior:contain}
+.bk-head{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:18px 24px;background:var(--dark)}
+.bk-head h3{font-size:1.25rem;color:#fff}
+.bk-head h3 em{font-style:italic;font-weight:500;color:var(--accl)}
+.bk-close{background:none;border:none;font-size:1.25rem;color:#fff;cursor:pointer;width:40px;height:40px}
+.bk-body{display:grid;grid-template-columns:1fr 1fr;gap:28px;padding:24px}
+@media(max-width:720px){.bk-body{grid-template-columns:1fr;gap:18px;padding:18px}}
+.bk-field{margin-bottom:14px}
+.bk-field label{display:block;font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--mar);margin-bottom:6px}
+.bk-field input,.bk-field select{width:100%;padding:11px 12px;border:1.5px solid var(--line);background:#fff;color:var(--tx);font-family:var(--bf);font-size:0.96rem}
+.bk-field input:focus,.bk-field select:focus{outline:none;border-color:var(--acc)}
+.bk-field.err input,.bk-field.err select{border-color:#C0564A}
+.bk-frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:720px){.bk-frow{grid-template-columns:1fr}}
+.cal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.cal-head .cal-label{font-family:var(--hf);font-weight:600;font-size:1.05rem;color:var(--dark);text-transform:uppercase}
+.cal-head button{width:36px;height:36px;border:1.5px solid var(--line);background:transparent;color:var(--dark);cursor:pointer}
+.cal-head button:disabled{opacity:0.3;cursor:default}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal-grid .dow{text-align:center;font-size:0.62rem;font-weight:700;text-transform:uppercase;color:var(--txs);padding:5px 0}
+.cal-day{aspect-ratio:1;border:1px solid transparent;background:#fff;color:var(--tx);font-family:var(--bf);font-size:0.88rem;font-weight:600;cursor:pointer}
+.cal-day:hover:not(:disabled){border-color:var(--acc)}
+.cal-day:disabled{background:transparent;color:rgba(0,0,0,0.2);cursor:default}
+.cal-day.sel{background:var(--acc);color:#fff}
+.cal-day.blank{visibility:hidden}
+.bk-picked{margin-top:10px;font-size:0.88rem;font-weight:600;color:var(--dark);min-height:20px}
+.bk-picked i{color:var(--accd);margin-right:7px}
+.bk-status{margin-top:8px;font-size:0.88rem;display:none;padding:10px 13px;border-left:3px solid var(--acc)}
+.bk-status.show{display:block}
+.bk-status.error{background:rgba(192,86,74,0.1);color:#8C3B31;border-left-color:#C0564A}
+.bk-status.success{background:rgba(0,0,0,0.05);color:var(--accd)}
+.bk-note{font-size:0.8rem;color:var(--txs);margin-top:10px;line-height:1.5}
 </style>
 </head>
 <body>
@@ -363,7 +361,7 @@ footer{background:#081724;color:rgba(244,239,230,0.72);padding:62px 0 28px}
     </ul>
     <div class="nav-right">
       <a href="tel:+13053945350" class="nav-phone">(305) 394-5350</a>
-      <a href="#contact" class="nav-cta">Book a Trip</a>
+      <a href="#" class="nav-cta" data-book="">Book a Trip</a>
     </div>
     <div class="mobile-actions">
       <a href="tel:+13053945350" class="mobile-call" aria-label="Call Captain Key Largo"><i class="fa-solid fa-phone"></i></a>
@@ -387,7 +385,7 @@ footer{background:#081724;color:rgba(244,239,230,0.72);padding:62px 0 28px}
   </nav>
   <div class="drawer-footer">
     <a href="tel:+13053945350" class="drawer-phone">(305) 394-5350</a>
-    <a href="#contact" class="btn">Book a Trip</a>
+    <a href="#" class="btn" data-book="">Book a Trip</a>
   </div>
 </aside>
 
@@ -400,7 +398,7 @@ footer{background:#081724;color:rgba(244,239,230,0.72);padding:62px 0 28px}
     <h1>Fish the Keys with a local. <em>Book the family fleet.</em></h1>
     <p class="lede">Capt. Brian Epstein is a 100 Ton USCG Master who has fished the Upper Keys since 1976. <span class="m-trim">Son of Bob Epstein, the Miami Herald's legendary fishing editor. </span>Every trip booked here sails with the Poppa Wahoo Collective, the Epstein family fleet: four boats, deep sea to sandbar, rates posted up front.</p>
     <div class="hero-ctas">
-      <a href="#contact" class="btn">Book a Trip</a>
+      <a href="#" class="btn" data-book="">Book a Trip</a>
       <a href="#trips" class="btn btn-ghost">Trips &amp; Rates</a>
       <a href="tel:+13053945350" class="hero-call">(305) 394-5350</a>
     </div>
@@ -430,7 +428,6 @@ footer{background:#081724;color:rgba(244,239,230,0.72);padding:62px 0 28px}
 <section id="trips" class="trips">
   <div class="wrap">
     <div class="trips-head">
-      <div class="kicker">Trips &amp; rates</div>
       <h2>The whole board, <em>priced up front.</em></h2>
       <p>Every trip below sails with the Poppa Wahoo Collective, the Epstein family fleet 20 minutes south in Islamorada. Book here and a captain confirms your date directly.</p>
     </div>
@@ -443,7 +440,7 @@ footer{background:#081724;color:rgba(244,239,230,0.72);padding:62px 0 28px}
         </div>
         <div class="tr-buy">
           <span class="tr-price">$1,475</span>
-          <a href="#contact" class="btn tr-book" data-trip="Deep sea half day ($1,475)">Book It</a>
+          <a href="#" class="btn tr-book" data-book="Deep sea half day ($1,475)">Book It</a>
         </div>
       </div>
       <div class="trip-row">
@@ -454,7 +451,7 @@ footer{background:#081724;color:rgba(244,239,230,0.72);padding:62px 0 28px}
         </div>
         <div class="tr-buy">
           <span class="tr-price">$1,975 / $2,475</span>
-          <a href="#contact" class="btn tr-book" data-trip="Deep sea three-quarter or full day ($1,975 / $2,475)">Book It</a>
+          <a href="#" class="btn tr-book" data-book="Deep sea three-quarter or full day ($1,975 / $2,475)">Book It</a>
         </div>
       </div>
       <div class="trip-row">
@@ -465,7 +462,7 @@ footer{background:#081724;color:rgba(244,239,230,0.72);padding:62px 0 28px}
         </div>
         <div class="tr-buy">
           <span class="tr-price">$1,000</span>
-          <a href="#contact" class="btn tr-book" data-trip="Evening shark trip ($1,000)">Book It</a>
+          <a href="#" class="btn tr-book" data-book="Evening shark trip ($1,000)">Book It</a>
         </div>
       </div>
       <div class="trip-row">
@@ -476,7 +473,7 @@ footer{background:#081724;color:rgba(244,239,230,0.72);padding:62px 0 28px}
         </div>
         <div class="tr-buy">
           <span class="tr-price">$2,700</span>
-          <a href="#contact" class="btn tr-book" data-trip="Overnight swordfish ($2,700)">Book It</a>
+          <a href="#" class="btn tr-book" data-book="Overnight swordfish ($2,700)">Book It</a>
         </div>
       </div>
       <div class="trip-row">
@@ -487,7 +484,7 @@ footer{background:#081724;color:rgba(244,239,230,0.72);padding:62px 0 28px}
         </div>
         <div class="tr-buy">
           <span class="tr-price">From $1,050</span>
-          <a href="#contact" class="btn tr-book" data-trip="Nearshore on Poppa Bay (from $1,050)">Book It</a>
+          <a href="#" class="btn tr-book" data-book="Nearshore on Poppa Bay (from $1,050)">Book It</a>
         </div>
       </div>
       <div class="trip-row">
@@ -498,7 +495,7 @@ footer{background:#081724;color:rgba(244,239,230,0.72);padding:62px 0 28px}
         </div>
         <div class="tr-buy">
           <span class="tr-price">$575</span>
-          <a href="#contact" class="btn tr-book" data-trip="Sunset cruise ($575)">Book It</a>
+          <a href="#" class="btn tr-book" data-book="Sunset cruise ($575)">Book It</a>
         </div>
       </div>
       <div class="trip-row">
@@ -509,7 +506,7 @@ footer{background:#081724;color:rgba(244,239,230,0.72);padding:62px 0 28px}
         </div>
         <div class="tr-buy">
           <span class="tr-price">$800</span>
-          <a href="#contact" class="btn tr-book" data-trip="Sandbar cruise ($800)">Book It</a>
+          <a href="#" class="btn tr-book" data-book="Sandbar cruise ($800)">Book It</a>
         </div>
       </div>
       <div class="trip-row">
@@ -520,11 +517,11 @@ footer{background:#081724;color:rgba(244,239,230,0.72);padding:62px 0 28px}
         </div>
         <div class="tr-buy">
           <span class="tr-price">Let's talk</span>
-          <a href="#contact" class="btn tr-book" data-trip="Bahamas / custom trip">Book It</a>
+          <a href="#" class="btn tr-book" data-book="Bahamas / custom trip">Book It</a>
         </div>
       </div>
     </div>
-    <div class="trips-compact"><a class="tc-tile" href="#contact" data-trip="Deep sea half day ($1,475)"><span class="tc-name">Deep Sea Half Day</span><span class="tc-price">$1,475</span><span class="tc-meta">4 hrs</span></a><a class="tc-tile" href="#contact" data-trip="Deep sea three-quarter or full day ($1,975 / $2,475)"><span class="tc-name">Three-Quarter &amp; Full Day</span><span class="tc-price">$1,975 / $2,475</span><span class="tc-meta">6 or 8 hrs</span></a><a class="tc-tile" href="#contact" data-trip="Evening shark trip ($1,000)"><span class="tc-name">Evening Shark Trip</span><span class="tc-price">$1,000</span><span class="tc-meta">3 hrs &middot; 5 pm</span></a><a class="tc-tile" href="#contact" data-trip="Overnight swordfish ($2,700)"><span class="tc-name">Overnight Swordfish</span><span class="tc-price">$2,700</span><span class="tc-meta">Overnight</span></a><a class="tc-tile" href="#contact" data-trip="Nearshore on Poppa Bay (from $1,050)"><span class="tc-name">Nearshore on Poppa Bay</span><span class="tc-price">From $1,050</span><span class="tc-meta">Calm water</span></a><a class="tc-tile" href="#contact" data-trip="Sunset cruise ($575)"><span class="tc-name">Sunset Cruise</span><span class="tc-price">$575</span><span class="tc-meta">2 hrs</span></a><a class="tc-tile" href="#contact" data-trip="Sandbar cruise ($800)"><span class="tc-name">Sandbar Cruise</span><span class="tc-price">$800</span><span class="tc-meta">3 hrs</span></a><a class="tc-tile" href="#contact" data-trip="Bahamas / custom trip"><span class="tc-name">Bahamas / Custom</span><span class="tc-price">Let's talk</span><span class="tc-meta">Built for you</span></a><a class="tc-book" href="#contact">Book a Trip</a></div>
+    <div class="trips-compact"><a class="tc-tile" href="#" data-book="Deep sea half day ($1,475)"><span class="tc-name">Deep Sea Half Day</span><span class="tc-price">$1,475</span><span class="tc-meta">4 hrs</span></a><a class="tc-tile" href="#" data-book="Deep sea three-quarter or full day ($1,975 / $2,475)"><span class="tc-name">Three-Quarter &amp; Full Day</span><span class="tc-price">$1,975 / $2,475</span><span class="tc-meta">6 or 8 hrs</span></a><a class="tc-tile" href="#" data-book="Evening shark trip ($1,000)"><span class="tc-name">Evening Shark Trip</span><span class="tc-price">$1,000</span><span class="tc-meta">3 hrs &middot; 5 pm</span></a><a class="tc-tile" href="#" data-book="Overnight swordfish ($2,700)"><span class="tc-name">Overnight Swordfish</span><span class="tc-price">$2,700</span><span class="tc-meta">Overnight</span></a><a class="tc-tile" href="#" data-book="Nearshore on Poppa Bay (from $1,050)"><span class="tc-name">Nearshore on Poppa Bay</span><span class="tc-price">From $1,050</span><span class="tc-meta">Calm water</span></a><a class="tc-tile" href="#" data-book="Sunset cruise ($575)"><span class="tc-name">Sunset Cruise</span><span class="tc-price">$575</span><span class="tc-meta">2 hrs</span></a><a class="tc-tile" href="#" data-book="Sandbar cruise ($800)"><span class="tc-name">Sandbar Cruise</span><span class="tc-price">$800</span><span class="tc-meta">3 hrs</span></a><a class="tc-tile" href="#" data-book="Bahamas / custom trip"><span class="tc-name">Bahamas / Custom</span><span class="tc-price">Let's talk</span><span class="tc-meta">Built for you</span></a><a class="tc-book" href="#" data-book="">Book a Trip</a></div>
   </div>
 </section>
 
@@ -580,7 +577,6 @@ footer{background:#081724;color:rgba(244,239,230,0.72);padding:62px 0 28px}
         <div class="cp-tag">Fishing here since 1976</div>
       </div>
       <div class="captain-copy">
-        <div class="kicker">The captain</div>
         <h2>Son of fishing royalty. <em>Raised on this water.</em></h2>
         <p><b>Captain Brian Epstein grew up in the Florida Keys as the son of Bob Epstein</b>, the Miami Herald's fishing editor, a photojournalist and author who spent a lifetime writing the book on Keys fishing. Brian has been fishing and exploring these waters since 1976, and it shows in every spot he runs to without checking a chart.</p>
         <p>He is a <b>USCG 100 Ton Master captain</b> and a proven tournament captain and decorated tournament angler. Alongside Captain Key Largo, he co-runs the <a href="https://crossfiber.github.io/poppa-wahoo/" style="color:var(--coral);font-weight:700">Poppa Wahoo Collective</a>, the family's Islamorada sportfishing fleet founded in tribute to his father.</p>
@@ -600,7 +596,6 @@ footer{background:#081724;color:rgba(244,239,230,0.72);padding:62px 0 28px}
   <div class="wrap">
     <div class="faq-grid">
       <div class="faq-intro">
-        <div class="kicker">Before you book</div>
         <h2>Straight answers, like the fishing.</h2>
         <p>The questions every first-timer asks. If yours is not here, call or text and ask directly. You will be talking to a captain, not a booking desk.</p>
         <a href="tel:+13053945350" class="btn btn-night">(305) 394-5350</a>
@@ -622,86 +617,74 @@ footer{background:#081724;color:rgba(244,239,230,0.72);padding:62px 0 28px}
 <!-- CONTACT -->
 <section id="contact" class="contact">
   <div class="wrap">
-    <div class="contact-grid">
-      <div class="contact-left">
-        <div class="kicker" style="color:var(--coral-lite)">Book a trip</div>
-        <h2>Pick your trip. <em>We hold the date.</em></h2>
-        <p class="csub">Choose a trip, send your dates and group size, and a captain from the family fleet confirms the boat and the details with you directly.</p>
-        <form id="bookForm" name="booking" method="POST" novalidate onsubmit="return submitForm(event)">
-          <div class="bw-prog"><span class="bw-st" id="bwSt">Step 1 of 3</span><span class="bw-dots" id="bwDots"><i class="on"></i><i></i><i></i></span></div>
-          <div class="bw-step" data-step="1">
-            <div class="field" id="f-trip">
-              <label>Which trip?</label>
-              <div class="bw-rows">
-                <label class="bw-row"><input type="radio" name="trip" value="Deep sea half day ($1,475)"><b>Deep sea half day</b><em>$1,475</em></label>
-                <label class="bw-row"><input type="radio" name="trip" value="Deep sea three-quarter or full day ($1,975 / $2,475)"><b>Deep sea, three-quarter or full day</b><em>$1,975 / $2,475</em></label>
-                <label class="bw-row"><input type="radio" name="trip" value="Evening shark trip ($1,000)"><b>Evening shark trip</b><em>$1,000</em></label>
-                <label class="bw-row"><input type="radio" name="trip" value="Overnight swordfish ($2,700)"><b>Overnight swordfish</b><em>$2,700</em></label>
-                <label class="bw-row"><input type="radio" name="trip" value="Nearshore on Poppa Bay (from $1,050)"><b>Nearshore on the Poppa Bay</b><em>from $1,050</em></label>
-                <label class="bw-row"><input type="radio" name="trip" value="Sunset cruise ($575)"><b>Sunset cruise</b><em>$575</em></label>
-                <label class="bw-row"><input type="radio" name="trip" value="Sandbar cruise ($800)"><b>Sandbar cruise</b><em>$800</em></label>
-                <label class="bw-row"><input type="radio" name="trip" value="Bahamas / custom trip"><b>Bahamas or a custom trip</b><em>Let's talk</em></label>
-              </div>
-              <div class="msg">Tap a trip so the right captain answers.</div>
+    <div class="contact-block">
+      <h2>Questions? <em>Start here.</em></h2>
+      <p class="csub">Every trip and rate is posted above. If you want to talk through a date, a group, or something custom, send it over and a captain gets back to you directly.</p>
+        <form id="bookForm" name="contact" method="POST" novalidate onsubmit="return submitForm(event)">
+          <div class="frow">
+            <div class="field" id="f-name">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name">
+              <div class="msg">We need a name to reply to.</div>
             </div>
-            <div class="bw-nav"><button type="button" class="btn bw-next">Next</button></div>
+            <div class="field" id="f-phone">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="(305) 555-0123" autocomplete="tel">
+              <div class="msg">That number looks short. Double-check it.</div>
+            </div>
           </div>
-          <div class="bw-step" data-step="2">
-            <div class="field" id="f-guests">
-              <label for="guests">How many aboard?</label>
-              <select id="guests" name="guests">
-                <option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option><option>6</option><option>7+</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="message">Dates &amp; details</label>
-              <textarea id="message" name="message" placeholder="Your dates in the Keys, and anything we should know."></textarea>
-            </div>
-            <div class="bw-nav"><button type="button" class="btn bw-ghost bw-back">Back</button><button type="button" class="btn bw-next">Next</button></div>
+          <div class="field" id="f-email">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email">
+            <div class="msg">That looks incomplete. Try something like you@email.com.</div>
           </div>
-          <div class="bw-step" data-step="3">
-            <div class="frow">
-              <div class="field" id="f-name">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name">
-                <div class="msg">We need a name for the booking.</div>
-              </div>
-              <div class="field" id="f-phone">
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" placeholder="(305) 555-0123" autocomplete="tel">
-                <div class="msg">That number looks short. Double-check it.</div>
-              </div>
-            </div>
-            <div class="field" id="f-email">
-              <label for="email">Email <span class="opt">optional</span></label>
-              <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email">
-              <div class="msg">That looks incomplete. Try something like you@email.com.</div>
-            </div>
-            <div class="bw-nav"><button type="button" class="btn bw-ghost bw-back">Back</button><button type="submit" class="btn">Request the Date</button></div>
+          <div class="field" id="f-message">
+            <label for="message">What can we help with?</label>
+            <textarea id="message" name="message" placeholder="Dates you are in the Keys, group size, a question about a trip, anything at all."></textarea>
+            <div class="msg">Tell us a little about what you are after.</div>
           </div>
-          <p class="bw-call">Rather talk it through? Call or text <a href="tel:+13053945350">(305) 394-5350</a>.</p>
+          <button type="submit" class="btn">Send It Over</button>
           <div class="form-status" id="formStatus"></div>
         </form>
-      </div>
-      <div class="contact-right">
-        <div class="c-block">
-          <div class="cl">Reach the captain</div>
-          <div class="crow"><span>Call or text <a href="tel:+13053945350">(305) 394-5350</a></span></div>
-          <div class="crow"><span><a href="mailto:davidepstein1969@icloud.com">davidepstein1969@icloud.com</a></span></div>
-        </div>
-        <div class="c-block">
-          <div class="cl">Where</div>
-          <div class="crow"><span>Key Largo, FL 33037. Serving the whole Upper Keys.</span></div>
-          <div class="crow"><span>Meeting dock confirmed when you book, matched to your trip and the tide.</span></div>
-        </div>
-        <p class="c-note">One boat, one captain, and a calendar that fills fast in season. If a date matters, lock it in early. Brian replies to every message himself, usually the same day.</p>
-      </div>
+      <p class="c-direct">Prefer to talk? Call or text <a href="tel:+13053945350">(305) 394-5350</a>.</p>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<section style="background:var(--night-2,#122A3E);color:#fff;padding:44px 0"><div class="wrap" style="display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap"><div style="max-width:58ch"><div class="kicker" style="color:var(--coral-lite)">The Poppa Wahoo Collective</div><h2 style="color:#fff">One family, <em>two islands.</em></h2><p style="margin-top:10px;color:rgba(255,255,255,0.75);font-size:0.98rem">Brian and his brother run the family operation founded in tribute to their father, Bob &quot;Poppa&quot; Epstein. The boats sail from Islamorada, 20 minutes south. Same family, same water, same standard.</p></div><a class="btn" href="the-epstein-family-fleet/" style="flex-shrink:0">The Family Story</a></div></section>
+<section style="background:var(--night-2,#122A3E);color:#fff;padding:44px 0"><div class="wrap" style="display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap"><div style="max-width:58ch">
+<h2 style="color:#fff">One family, <em>two islands.</em></h2><p style="margin-top:10px;color:rgba(255,255,255,0.75);font-size:0.98rem">Brian and his brother run the family operation founded in tribute to their father, Bob &quot;Poppa&quot; Epstein. The boats sail from Islamorada, 20 minutes south. Same family, same water, same standard.</p></div><a class="btn" href="the-epstein-family-fleet/" style="flex-shrink:0">The Family Story</a></div></section>
+<div class="bk-overlay" id="bkOverlay" role="dialog" aria-modal="true" aria-label="Book a trip">
+  <div class="bk-modal">
+    <div class="bk-head"><h3>Pick a day. <em>We hold the boat.</em></h3><button class="bk-close" id="bkClose" aria-label="Close booking"><i class="fa-solid fa-xmark"></i></button></div>
+    <div class="bk-body">
+      <div>
+        <div class="cal-head">
+          <button id="calPrev" aria-label="Previous month"><i class="fa-solid fa-arrow-left"></i></button>
+          <span class="cal-label" id="calLabel"></span>
+          <button id="calNext" aria-label="Next month"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="cal-grid" id="calGrid"></div>
+        <div class="bk-picked" id="bkPicked"></div>
+      </div>
+      <div>
+        <div class="bk-field" id="bkf-trip"><label for="bk-trip">Trip</label><select id="bk-trip"><option value="">Pick a trip</option><option>Deep sea half day ($1,475)</option><option>Deep sea three-quarter or full day ($1,975 / $2,475)</option><option>Evening shark trip ($1,000)</option><option>Overnight swordfish ($2,700)</option><option>Nearshore on Poppa Bay (from $1,050)</option><option>Sunset cruise ($575)</option><option>Sandbar cruise ($800)</option><option>Bahamas / custom trip</option></select></div>
+        <div class="bk-frow">
+          <div class="bk-field" id="bkf-name"><label for="bk-name">Name</label><input type="text" id="bk-name" placeholder="Your name"></div>
+          <div class="bk-field" id="bkf-guests"><label for="bk-guests">Guests</label><select id="bk-guests"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option><option>6</option><option>7+</option></select></div>
+        </div>
+        <div class="bk-frow">
+          <div class="bk-field" id="bkf-phone"><label for="bk-phone">Phone</label><input type="tel" id="bk-phone" placeholder="(305) 555-0123"></div>
+          <div class="bk-field" id="bkf-email"><label for="bk-email">Email</label><input type="email" id="bk-email" placeholder="you@email.com"></div>
+        </div>
+        <button class="btn" id="bkSubmit" style="width:100%">Request This Date</button>
+        <div class="bk-status" id="bkStatus"></div>
+        <p class="bk-note">A captain from the family fleet confirms your date and the meeting dock directly. Prefer to talk? Call or text <a href="tel:+13053945350" style="color:var(--accd);font-weight:700">(305) 394-5350</a>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <footer>
   <div class="wrap">
     <div class="foot-signoff">
@@ -853,63 +836,91 @@ if ('scrollRestoration' in history) { history.scrollRestoration = 'auto'; }
   // Booking modal + calendar
 })();
 
-(function(){
-  var f=document.getElementById('bookForm');if(!f)return;
-  var steps=[].slice.call(f.querySelectorAll('.bw-step'));
-  var dots=[].slice.call(f.querySelectorAll('#bwDots i'));
-  var st=document.getElementById('bwSt');
-  var cur=0;
-  f.classList.add('bw-on');
-  function show(i){cur=i;steps.forEach(function(s,j){s.classList.toggle('on',j===i);});dots.forEach(function(d,j){d.classList.toggle('on',j<=i);});st.textContent='Step '+(i+1)+' of 3';}
-  function valid(i){
-    if(i===0){var ok=!!f.querySelector('input[name="trip"]:checked');document.getElementById('f-trip').classList.toggle('err',!ok);return ok;}
-    return true;
-  }
-  f.querySelectorAll('.bw-next').forEach(function(b){b.addEventListener('click',function(){if(valid(cur))show(Math.min(cur+1,2));});});
-  f.querySelectorAll('.bw-back').forEach(function(b){b.addEventListener('click',function(){show(Math.max(cur-1,0));});});
-  function pick(row,advance){
-    f.querySelectorAll('.bw-row').forEach(function(x){x.classList.remove('sel');});
-    row.classList.add('sel');row.querySelector('input').checked=true;
-    document.getElementById('f-trip').classList.remove('err');
-    if(advance)setTimeout(function(){show(1);},240);
-  }
-  f.querySelectorAll('.bw-row').forEach(function(t){t.addEventListener('click',function(){pick(t,true);});});
-  ['name','phone','email'].forEach(function(id){var el=document.getElementById(id);if(el)el.addEventListener('input',function(){var w=document.getElementById('f-'+id);if(w)w.classList.remove('err');});});
-  // Book It buttons on the trip ledger preselect the trip and jump to the form
-  document.querySelectorAll('[data-trip]').forEach(function(a){
-    a.addEventListener('click',function(){
-      var v=a.getAttribute('data-trip');
-      var r=f.querySelector('input[name="trip"][value="'+v+'"]');
-      if(r){pick(r.closest('.bw-row'),false);show(1);}
-    });
-  });
-  show(0);
-})();
 window.submitForm=function(e){
   e.preventDefault();
   var status=document.getElementById('formStatus');
   var ok=true;
   function mark(id,bad){var el=document.getElementById(id);if(el)el.classList.toggle('err',bad);if(bad)ok=false;}
-  var tripEl=document.querySelector('#bookForm input[name="trip"]:checked');
-  var trip=tripEl?tripEl.value:'';
   var name=(document.getElementById('name').value||'').trim();
   var phone=(document.getElementById('phone').value||'').trim();
   var email=(document.getElementById('email').value||'').trim();
-  var guests=document.getElementById('guests').value;
   var msg=(document.getElementById('message').value||'').trim();
   mark('f-name',!name);
-  var phoneOk=phone.replace(/\D/g,'').length>=10;mark('f-phone',!phoneOk);
-  var emailOk=email===''||/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  mark('f-email',!emailOk);
-  if(!trip){document.getElementById('f-trip').classList.add('err');ok=false;}
+  mark('f-phone',phone.replace(/\D/g,'').length<10);
+  mark('f-email',!(email!==''&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)));
+  mark('f-message',!msg);
   if(!ok){status.className='form-status show error';status.textContent='Almost there. Check the highlighted fields and resend.';return false;}
-  var subject=encodeURIComponent('Booking request via Captain Key Largo: '+trip+' for '+name);
-  var body=encodeURIComponent('Booked from: Captain Key Largo (captainkeylargo site)\nTrip: '+trip+'\nGuests: '+guests+'\nName: '+name+'\nPhone: '+phone+'\nEmail: '+(email||'(not given)')+'\n\nDates and details:\n'+(msg||'(none)')+'\n\nPage: '+window.location.href);
+  var subject=encodeURIComponent('Message via the Captain Key Largo website: '+name);
+  var body=encodeURIComponent('Name: '+name+'\nPhone: '+phone+'\nEmail: '+email+'\n\nMessage:\n'+msg+'\n\nSent from: '+window.location.href);
   window.location.href='mailto:davidepstein1969@icloud.com?subject='+subject+'&body='+body;
   status.className='form-status show success';
-  status.innerHTML="Your email app just opened with the request pre-filled. Faster answer? Call or text <a href='tel:+13053945350' style='color:var(--coral-lite);font-weight:700;'>(305) 394-5350</a>.";
+  status.innerHTML="Your email app just opened with everything filled in. Faster answer? Call or text <a href='tel:+13053945350' style='color:var(--coral-lite);font-weight:700;'>(305) 394-5350</a>.";
   return false;
 };
+</script>
+<script>
+(function(){
+  var bkOverlay=document.getElementById('bkOverlay');
+  var calGrid=document.getElementById('calGrid'),calLabel=document.getElementById('calLabel');
+  var calPrevB=document.getElementById('calPrev'),calNextB=document.getElementById('calNext');
+  var bkPicked=document.getElementById('bkPicked');
+  var MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var DOWS=['Su','Mo','Tu','We','Th','Fr','Sa'];
+  var today=new Date();today.setHours(0,0,0,0);
+  var view=new Date(today.getFullYear(),today.getMonth(),1);var selDate=null;
+  function sameDay(a,b){return a&&b&&a.getTime()===b.getTime();}
+  function renderCal(){
+    calLabel.textContent=MONTHS[view.getMonth()]+' '+view.getFullYear();
+    calPrevB.disabled=(view.getFullYear()===today.getFullYear()&&view.getMonth()===today.getMonth());
+    var html='';DOWS.forEach(function(d){html+='<span class="dow">'+d+'</span>';});
+    var first=new Date(view.getFullYear(),view.getMonth(),1).getDay();
+    var days=new Date(view.getFullYear(),view.getMonth()+1,0).getDate();
+    for(var i=0;i<first;i++){html+='<button class="cal-day blank" tabindex="-1" disabled></button>';}
+    for(var d=1;d<=days;d++){
+      var dt=new Date(view.getFullYear(),view.getMonth(),d);
+      html+='<button class="cal-day'+(sameDay(dt,selDate)?' sel':'')+'" data-day="'+d+'"'+(dt<today?' disabled':'')+'>'+d+'</button>';
+    }
+    calGrid.innerHTML=html;
+    calGrid.querySelectorAll('.cal-day[data-day]').forEach(function(b){
+      b.addEventListener('click',function(){
+        selDate=new Date(view.getFullYear(),view.getMonth(),parseInt(b.getAttribute('data-day'),10));
+        renderCal();
+        bkPicked.textContent=selDate.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});
+      });
+    });
+  }
+  calPrevB.addEventListener('click',function(){view=new Date(view.getFullYear(),view.getMonth()-1,1);renderCal();});
+  calNextB.addEventListener('click',function(){view=new Date(view.getFullYear(),view.getMonth()+1,1);renderCal();});
+  function openBooking(trip){
+    if(trip){var sel=document.getElementById('bk-trip');for(var i=0;i<sel.options.length;i++){if(sel.options[i].text===trip){sel.selectedIndex=i;break;}}}
+    renderCal();bkOverlay.classList.add('open');document.body.classList.add('modal-open');
+  }
+  function closeBooking(){bkOverlay.classList.remove('open');document.body.classList.remove('modal-open');document.getElementById('bkStatus').className='bk-status';}
+  document.querySelectorAll('[data-book]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();openBooking(a.getAttribute('data-book'));});});
+  document.getElementById('bkClose').addEventListener('click',closeBooking);
+  bkOverlay.addEventListener('click',function(e){if(e.target===bkOverlay)closeBooking();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&bkOverlay.classList.contains('open'))closeBooking();});
+  document.querySelectorAll('#bk-name,#bk-phone,#bk-email,#bk-trip').forEach(function(el){el.addEventListener('input',function(){var f=el.closest('.bk-field');if(f)f.classList.remove('err');});});
+  document.getElementById('bkSubmit').addEventListener('click',function(){
+    var st=document.getElementById('bkStatus');var ok=true;
+    function mark(id,bad){var el=document.getElementById(id);if(el)el.classList.toggle('err',bad);if(bad)ok=false;}
+    var trip=document.getElementById('bk-trip').value;
+    var name=(document.getElementById('bk-name').value||'').trim();
+    var phone=(document.getElementById('bk-phone').value||'').trim();
+    var email=(document.getElementById('bk-email').value||'').trim();
+    var guests=document.getElementById('bk-guests').value;
+    mark('bkf-trip',!trip);mark('bkf-name',!name);
+    mark('bkf-phone',phone.replace(/\D/g,'').length<10);
+    mark('bkf-email',!(email!==''&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)));
+    if(!selDate){ok=false;bkPicked.textContent='Pick a day on the calendar first.';}
+    if(!ok){st.className='bk-status show error';st.textContent='Almost there. Check the highlighted fields and your date.';return;}
+    var dstr=selDate.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});
+    var subject=encodeURIComponent('Booking request via Captain Key Largo: '+trip+' on '+dstr);
+    var body=encodeURIComponent('Trip: '+trip+'\nDate: '+dstr+'\nGuests: '+guests+'\nName: '+name+'\nPhone: '+phone+'\nEmail: '+email+'\nPage: '+window.location.href);
+    window.location.href='mailto:davidepstein1969@icloud.com?subject='+subject+'&body='+body;
+    st.className='bk-status show success';st.textContent='Your email app opened with the request. We confirm the date with you directly.';
+  });
+})();
 </script>
 </body>
 </html>
