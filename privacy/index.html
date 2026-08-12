@@ -67,9 +67,13 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);back
 .logo-pill img{height:28px;width:auto;display:block}
 .drawer-close{background:none;border:none;font-size:1.35rem;color:#fff;cursor:pointer;width:40px;height:40px}
 .drawer-eyebrow{padding:20px 26px 4px;font-size:0.7rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--marl)}
-.drawer-links{display:flex;flex-direction:column;flex:1;overflow-y:auto;min-height:0;padding:2px 0 8px}
-.drawer-links a{padding:16px 26px;color:#fff;font-family:var(--hf);font-weight:700;font-size:1.5rem;line-height:1.15;text-transform:uppercase;transition:color .2s,padding-left .2s}
+.drawer-scroll{flex:1;overflow-y:auto;min-height:0;display:flex;flex-direction:column;padding:2px 0 10px}
+.drawer-links{display:flex;flex-direction:column}
+.drawer-links a{padding:13px 26px;color:#fff;font-family:var(--hf);font-weight:700;font-size:1.3rem;line-height:1.15;text-transform:uppercase;transition:color .2s,padding-left .2s}
 .drawer-links a:hover{color:var(--accl);padding-left:34px}
+.drawer-sub{display:flex;flex-direction:column;margin:10px 26px 0;padding-top:11px;border-top:1px solid rgba(255,255,255,0.16)}
+.drawer-sub a{padding:9px 0;color:rgba(255,255,255,0.7);font-family:var(--bf);font-weight:600;font-size:0.85rem;line-height:1.3;transition:color .2s}
+.drawer-sub a:hover{color:var(--accl)}
 .drawer-footer{padding:16px 20px calc(18px + env(safe-area-inset-bottom));border-top:1px solid rgba(255,255,255,0.14);display:flex;flex-direction:column;gap:11px}
 .drawer-phone{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#fff;color:var(--dark);font-weight:700;font-size:1.02rem;padding:13px}
 .drawer-phone i{color:var(--accd)}
@@ -230,9 +234,14 @@ body.modal-open{overflow:hidden}
 <aside class="nav-drawer" id="navDrawer" aria-hidden="true" aria-label="Site menu">
   <div class="drawer-header"><span>Captain Key Largo</span><button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button></div>
   <div class="drawer-eyebrow">Key Largo &middot; Florida Keys</div>
-  <nav class="drawer-links">
-    <a href="../">Home</a><a href="../#trips">The Trips</a><a href="../#boat">The Boat</a><a href="../#captain">The Captain</a><a href="../#faq">FAQ</a>
-  </nav>
+  <div class="drawer-scroll">
+    <nav class="drawer-links">
+      <a href="../">Home</a><a href="../#trips">The Trips</a><a href="../#boat">The Boat</a><a href="../#captain">The Captain</a><a href="../#faq">FAQ</a>
+    </nav>
+    <nav class="drawer-sub" aria-label="More on this site">
+      <a href="../key-largo-fishing-seasons/">Season Calendar</a><a href="../key-largo-charter-cost/">What a Charter Costs</a><a href="../find-us-key-largo/">Where to Find Us</a><a href="../the-epstein-family-fleet/">The Epstein Family Fleet</a>
+    </nav>
+  </div>
   <div class="drawer-footer">
     <a href="tel:+19543267360" class="drawer-phone"><i class="fa-solid fa-phone-volume"></i> (954) 326-7360</a>
     <a href="#" class="drawer-cta" data-book="Backcountry / inshore fishing">Book a Trip</a>
