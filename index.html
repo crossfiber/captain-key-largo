@@ -111,10 +111,14 @@ nav.site-nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h)
 .drawer-close{background:none;border:none;font-size:1.4rem;color:var(--sand);cursor:pointer;width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center}
 .drawer-close:hover{color:var(--coral-lite)}
 .drawer-eyebrow{padding:20px 26px 4px;font-size:0.7rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--marlin-lite)}
-.drawer-links{display:flex;flex-direction:column;flex:1;overflow-y:auto;min-height:0;padding:8px 0}
-.drawer-links a{padding:16px 22px;color:var(--sand);font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:1.3rem;letter-spacing:0.04em;text-transform:uppercase;border-bottom:1px solid var(--line-d-soft);transition:color .2s,background .2s,padding-left .2s}
+.drawer-scroll{flex:1;overflow-y:auto;min-height:0;display:flex;flex-direction:column;padding:8px 0 10px}
+.drawer-links{display:flex;flex-direction:column}
+.drawer-links a{padding:13px 22px;color:var(--sand);font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:1.3rem;letter-spacing:0.04em;text-transform:uppercase;border-bottom:1px solid var(--line-d-soft);transition:color .2s,background .2s,padding-left .2s}
 .drawer-links a span{color:var(--coral-lite);font-size:0.78em;margin-right:10px}
 .drawer-links a:hover{color:var(--coral-lite);background:var(--night-2);padding-left:30px}
+.drawer-sub{display:flex;flex-direction:column;margin:10px 22px 0;padding-top:11px;border-top:1px solid rgba(244,239,230,0.16)}
+.drawer-sub a{padding:9px 0;color:rgba(248,245,238,0.7);font-family:'Barlow',sans-serif;font-weight:600;font-size:0.85rem;line-height:1.3;transition:color .2s}
+.drawer-sub a:hover{color:var(--coral-lite)}
 .drawer-footer{padding:18px 22px calc(20px + env(safe-area-inset-bottom));border-top:1px solid var(--line-d);background:var(--night-2);display:flex;flex-direction:column;gap:12px}
 .drawer-phone{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#fff;color:var(--night);font-weight:700;font-size:1.05rem;padding:13px}
 .drawer-phone i{color:var(--coral)}
@@ -378,12 +382,20 @@ body.modal-open{overflow:hidden}
     <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
   </div>
   <div class="drawer-eyebrow">Key Largo &middot; Florida Keys</div>
-  <nav class="drawer-links">
-    <a href="#trips">The Trips</a>
-    <a href="#boat">The Boat</a>
-    <a href="#captain">The Captain</a>
-    <a href="#faq">FAQ</a>
-  </nav>
+  <div class="drawer-scroll">
+    <nav class="drawer-links">
+      <a href="#trips">The Trips</a>
+      <a href="#boat">The Boat</a>
+      <a href="#captain">The Captain</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <nav class="drawer-sub" aria-label="More on this site">
+      <a href="key-largo-fishing-seasons/">Season Calendar</a>
+      <a href="key-largo-charter-cost/">What a Charter Costs</a>
+      <a href="find-us-key-largo/">Where to Find Us</a>
+      <a href="the-epstein-family-fleet/">The Epstein Family Fleet</a>
+    </nav>
+  </div>
   <div class="drawer-footer">
     <a href="tel:+19543267360" class="drawer-phone">(954) 326-7360</a>
     <a href="#" class="btn" data-book="">Book a Trip</a>
