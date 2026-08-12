@@ -74,6 +74,24 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);back
 .drawer-sub{display:flex;flex-direction:column;margin:10px 26px 0;padding-top:11px;border-top:1px solid rgba(255,255,255,0.16)}
 .drawer-sub a{padding:9px 0;color:rgba(255,255,255,0.7);font-family:var(--bf);font-weight:600;font-size:0.85rem;line-height:1.3;transition:color .2s}
 .drawer-sub a:hover{color:var(--accl)}
+.spec-wrap{margin:6px 0 4px}
+.spec-note{font-size:0.94rem;color:var(--txs);margin:0 0 22px;line-height:1.6}
+.spec-note a{color:var(--accd);font-weight:700;border-bottom:1px solid rgba(0,0,0,0.18)}
+.spec-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.spec-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);text-decoration:none;transition:border-color .2s,box-shadow .2s}
+.spec-card:hover{border-color:var(--acc);box-shadow:0 10px 26px rgba(0,0,0,0.09)}
+.spec-ph{height:150px;overflow:hidden;background:var(--bg2)}
+.spec-ph img{width:100%;height:100%;object-fit:cover;display:block}
+.spec-tx{padding:15px 16px 17px;display:flex;flex-direction:column;gap:6px;flex:1}
+.spec-zone{font-size:0.63rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--mar)}
+.spec-name{font-family:var(--hf);font-weight:700;font-size:1.08rem;line-height:1.2;color:var(--tx);text-transform:uppercase}
+.spec-when{font-size:0.8rem;color:var(--txs);line-height:1.45;margin-top:auto;padding-top:6px}
+.spec-grid.no-ph .spec-card{border-left:3px solid var(--acc)}
+.spec-grid.no-ph .spec-tx{padding:19px 20px 20px;gap:7px}
+.spec-grid.no-ph .spec-name{font-size:1.24rem}
+.spec-go{font-size:0.74rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--accd);display:inline-flex;align-items:center;gap:7px}
+@media(max-width:900px){.spec-grid{grid-template-columns:1fr 1fr;gap:12px}.spec-ph{height:122px}.spec-tx{padding:13px 13px 15px}.spec-name{font-size:0.98rem}.spec-when{font-size:0.75rem}}
+@media(max-width:900px){.spec-grid>.spec-card:nth-child(odd):last-child{grid-column:1 / -1}.spec-grid>.spec-card:nth-child(odd):last-child .spec-ph{height:150px}}
 .drawer-footer{padding:16px 20px calc(18px + env(safe-area-inset-bottom));border-top:1px solid rgba(255,255,255,0.14);display:flex;flex-direction:column;gap:11px}
 .drawer-phone{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#fff;color:var(--dark);font-weight:700;font-size:1.02rem;padding:13px}
 .drawer-phone i{color:var(--accd)}
@@ -239,7 +257,7 @@ body.modal-open{overflow:hidden}
       <a href="../">Home</a><a href="../#trips">The Trips</a><a href="../#boat">The Boat</a><a href="../#captain">The Captain</a><a href="../#faq">FAQ</a>
     </nav>
     <nav class="drawer-sub" aria-label="More on this site">
-      <a href="../key-largo-fishing-seasons/">Season Calendar</a><a href="../key-largo-charter-cost/">What a Charter Costs</a><a href="../find-us-key-largo/">Where to Find Us</a><a href="../the-epstein-family-fleet/">The Epstein Family Fleet</a>
+      <a href="../key-largo-fishing-seasons/">Season Calendar</a><a href="../key-largo-fish-species/">Species Guide</a><a href="../find-us-key-largo/">Where to Find Us</a>
     </nav>
   </div>
   <div class="drawer-footer">
@@ -292,6 +310,7 @@ body.modal-open{overflow:hidden}
       </div>
     </aside>
   </div>
+  
   <section class="faq">
     <h2>Quick answers</h2>
     <details><summary>Which is better for families with kids?</summary><p>Key Largo's protected backcountry, or Islamorada's nearshore bay boat trips. Calm water either way; pick by drive time and your hotel.</p></details><details><summary>Which has better offshore fishing?</summary><p>Islamorada, by reputation and geography: the humps and the edge are its home water, and the family's Hatteras fleet is built for them.</p></details><details><summary>Can we fish both in one trip?</summary><p>Easily, and people do: backcountry day out of Key Largo, offshore day out of Islamorada. Same family, two docks, one phone call each.</p></details>
@@ -314,7 +333,7 @@ body.modal-open{overflow:hidden}
         <a href="tel:+19543267360">(954) 326-7360</a><br>
         <a href="mailto:epstein23@gmail.com">epstein23@gmail.com</a>
       </address></div>
-      <div class="f-grp"><h4>Backcountry &amp; inshore</h4><ul><li><a href="../tarpon-fishing-key-largo/">Tarpon Fishing</a></li><li><a href="../bonefish-key-largo/">Bonefish</a></li><li><a href="../permit-fishing-key-largo/">Permit</a></li><li><a href="../snook-fishing-key-largo/">Snook</a></li><li><a href="../redfish-key-largo/">Redfish</a></li><li><a href="../mangrove-snapper-key-largo/">Mangrove Snapper</a></li><li><a href="../spanish-mackerel-key-largo/">Spanish Mackerel</a></li></ul></div><div class="f-grp"><h4>The trips</h4><ul><li><a href="../backcountry-fishing-key-largo/">Backcountry Trips</a></li><li><a href="../reef-fishing-key-largo/">Reef &amp; Nearshore</a></li><li><a href="../night-fishing-key-largo/">Night Fishing</a></li><li><a href="../lobster-shrimp-trips-key-largo/">Lobster &amp; Shrimp</a></li><li><a href="../snorkel-eco-tours-key-largo/">Snorkel &amp; Eco Tours</a></li><li><a href="../key-largo-fishing-seasons/">Season Calendar</a></li></ul></div><div class="f-grp"><h4>The captain</h4><ul><li><a href="../">Home</a></li><li><a href="../captain-brian-epstein/">Capt. Brian Epstein</a></li><li><a href="../the-epstein-family-fleet/">The Epstein Family</a></li><li><a href="../find-us-key-largo/">How to Find Us</a></li><li><a href="../fishing-charter-from-miami/">From Miami</a></li><li><a href="../key-largo-vs-islamorada-charters/" class="cur">Key Largo vs Islamorada</a></li><li><a href="../key-largo-charter-cost/">How Pricing Works</a></li></ul></div><div class="f-grp"><h4>Going offshore? &middot; Islamorada</h4><ul><li><a href="https://crossfiber.github.io/poppa-wahoo/">The Poppa Wahoo Collective</a></li><li><a href="https://crossfiber.github.io/poppa-wahoo/deep-sea-fishing-islamorada/">Deep Sea Charters</a></li><li><a href="https://crossfiber.github.io/poppa-wahoo/swordfish-charters-islamorada/">Overnight Swordfish</a></li><li><a href="https://crossfiber.github.io/poppa-wahoo/mahi-mahi-fishing-islamorada/">Mahi Mahi</a></li><li><a href="https://crossfiber.github.io/poppa-wahoo/sailfish-charters-islamorada/">Sailfish</a></li></ul></div>
+      <div class="f-grp"><h4>Backcountry &amp; inshore</h4><ul><li><a href="../key-largo-fish-species/">All Species Guide</a></li><li><a href="../tarpon-fishing-key-largo/">Tarpon Fishing</a></li><li><a href="../bonefish-key-largo/">Bonefish</a></li><li><a href="../permit-fishing-key-largo/">Permit</a></li><li><a href="../snook-fishing-key-largo/">Snook</a></li><li><a href="../redfish-key-largo/">Redfish</a></li><li><a href="../mangrove-snapper-key-largo/">Mangrove Snapper</a></li><li><a href="../spanish-mackerel-key-largo/">Spanish Mackerel</a></li></ul></div><div class="f-grp"><h4>The trips</h4><ul><li><a href="../backcountry-fishing-key-largo/">Backcountry Trips</a></li><li><a href="../reef-fishing-key-largo/">Reef &amp; Nearshore</a></li><li><a href="../night-fishing-key-largo/">Night Fishing</a></li><li><a href="../lobster-shrimp-trips-key-largo/">Lobster &amp; Shrimp</a></li><li><a href="../snorkel-eco-tours-key-largo/">Snorkel &amp; Eco Tours</a></li><li><a href="../key-largo-fishing-seasons/">Season Calendar</a></li></ul></div><div class="f-grp"><h4>The captain</h4><ul><li><a href="../">Home</a></li><li><a href="../captain-brian-epstein/">Capt. Brian Epstein</a></li><li><a href="../the-epstein-family-fleet/">The Epstein Family</a></li><li><a href="../find-us-key-largo/">How to Find Us</a></li><li><a href="../fishing-charter-from-miami/">From Miami</a></li><li><a href="../key-largo-vs-islamorada-charters/" class="cur">Key Largo vs Islamorada</a></li><li><a href="../key-largo-charter-cost/">How Pricing Works</a></li></ul></div><div class="f-grp"><h4>Going offshore? &middot; Islamorada</h4><ul><li><a href="https://crossfiber.github.io/poppa-wahoo/">The Poppa Wahoo Collective</a></li><li><a href="https://crossfiber.github.io/poppa-wahoo/deep-sea-fishing-islamorada/">Deep Sea Charters</a></li><li><a href="https://crossfiber.github.io/poppa-wahoo/swordfish-charters-islamorada/">Overnight Swordfish</a></li><li><a href="https://crossfiber.github.io/poppa-wahoo/mahi-mahi-fishing-islamorada/">Mahi Mahi</a></li><li><a href="https://crossfiber.github.io/poppa-wahoo/sailfish-charters-islamorada/">Sailfish</a></li></ul></div>
     </div>
     <div class="f-in">
       <div class="fb-row">
