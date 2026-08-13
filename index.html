@@ -206,32 +206,36 @@ body.drawer-open .mobile-actions{visibility:hidden}
 }
 /* FLEET */
 
-/* ---- The Collective (R13): sister-brand section, dark, full-bleed ---- */
-.coll{background:var(--night);color:var(--sand);padding:92px 0 96px;position:relative;overflow:hidden}
-.coll-in{position:relative;z-index:2}
-.coll-eye{font-family:'Barlow',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--marlin-lite);margin-bottom:14px}
-.coll h2{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:clamp(1.95rem,4.2vw,2.9rem);line-height:1.05;text-transform:uppercase;letter-spacing:0.01em;color:#fff}
-@media(max-width:560px){.coll h2 br{display:none}}
-.coll h2 em{font-style:normal;color:var(--coral-lite)}
-.coll-lede{margin-top:16px;max-width:62ch;font-size:1.02rem;line-height:1.65;color:rgba(248,245,238,0.78)}
-.coll-split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:38px}
-.coll-side{background:var(--night-2);border:1px solid var(--line-d);padding:26px 26px 28px;display:flex;flex-direction:column}
-.coll-side.here{border-left:3px solid var(--coral)}
-.coll-side.there{border-left:3px solid var(--marlin)}
-.cs-where{font-family:'Barlow',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--marlin-lite);margin-bottom:9px}
-.coll-side.here .cs-where{color:var(--coral-lite)}
-.cs-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.5rem;text-transform:uppercase;letter-spacing:0.02em;color:#fff;line-height:1.1}
-.cs-boat{font-size:0.85rem;color:rgba(248,245,238,0.6);margin-top:6px}
-.cs-list{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-direction:column;gap:9px}
-.cs-list li{font-size:0.93rem;line-height:1.45;color:rgba(248,245,238,0.86);padding-left:16px;position:relative}
-.cs-list li:before{content:'';position:absolute;left:0;top:9px;width:6px;height:1px;background:var(--coral-lite)}
-.coll-side.there .cs-list li:before{background:var(--marlin-lite)}
-.cs-foot{margin-top:auto;padding-top:22px}
-.cs-tel{display:inline-flex;align-items:center;justify-content:center;background:#fff;color:var(--night);font-weight:700;font-size:0.98rem;padding:12px 20px;text-decoration:none}
-.cs-go{display:inline-flex;align-items:center;gap:9px;background:var(--coral);color:var(--night);font-weight:700;font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;padding:13px 20px;text-decoration:none}
-.coll-note{margin-top:26px;font-size:0.9rem;line-height:1.6;color:rgba(248,245,238,0.6);max-width:70ch}
-.coll-note a{color:var(--coral-lite);font-weight:700}
-@media(max-width:820px){.coll{padding:60px 0 64px}.coll-split{grid-template-columns:1fr;gap:12px}.coll-side{padding:22px}.cs-name{font-size:1.32rem}}
+
+/* ---- The Collective: full-bleed photo pair, no cards, no bullets ---- */
+.coll{background:var(--sand);padding:86px 0 0;overflow:hidden}
+.coll-head{max-width:none}
+.coll-head h2{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:clamp(2.1rem,4.6vw,3.15rem);line-height:1.02;text-transform:uppercase;color:var(--night);max-width:16ch}
+.coll-head h2 b{font-weight:700;color:var(--coral)}
+.coll-head p{margin-top:18px;max-width:60ch;font-size:1.04rem;line-height:1.68;color:var(--text-soft)}
+.coll-pair{display:grid;grid-template-columns:46fr 54fr;margin-top:52px;width:100vw;margin-left:calc(50% - 50vw)}
+.cp{position:relative;display:block;min-height:520px;text-decoration:none;overflow:hidden}
+.cp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.cp:hover img{transform:scale(1.035)}
+.cp:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,27,51,0) 28%,rgba(13,27,51,.7) 62%,rgba(13,27,51,.95) 100%)}
+.cp-tx{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:0 42px 40px}
+.cp-place{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:clamp(2.4rem,4vw,3.4rem);line-height:.98;text-transform:uppercase;color:#fff}
+.cp-who{display:block;margin-top:7px;font-size:0.9rem;font-weight:600;color:var(--coral-lite)}
+.cp-tx p{margin-top:13px;max-width:34ch;font-size:1rem;line-height:1.55;color:rgba(248,245,238,.9)}
+.cp-cta{display:inline-flex;align-items:center;gap:10px;margin-top:20px;font-size:0.8rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#fff;border-bottom:2px solid var(--coral);padding-bottom:5px;transition:gap .25s}
+.cp:hover .cp-cta{gap:16px}
+.coll-note{padding:34px 0 88px;font-size:0.97rem;line-height:1.7;color:var(--text-soft);max-width:74ch}
+.coll-note a{color:var(--coral);font-weight:700;border-bottom:1px solid rgba(194,154,59,.4)}
+@media(max-width:880px){
+  .coll{padding:56px 0 0}
+  .coll-pair{grid-template-columns:1fr;margin-top:34px}
+  .cp{min-height:390px}
+  .cp img{object-position:center 34%}
+  .cp:after{background:linear-gradient(180deg,rgba(13,27,51,.1) 0%,rgba(13,27,51,.4) 32%,rgba(13,27,51,.82) 62%,rgba(13,27,51,.97) 100%)}
+  .cp-tx{padding:0 24px 28px}
+  .cp-tx p{font-size:0.94rem;max-width:38ch}
+  .coll-note{padding:26px 0 60px;font-size:0.92rem}
+}
 .fleet{background:var(--sand-2);padding:88px 0 96px}
 .fleet-head{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;margin-bottom:38px}
 .fleet-head h2{font-size:clamp(1.9rem,3.6vw,3rem);color:var(--night);max-width:18ch}
@@ -564,39 +568,37 @@ body.modal-open{overflow:hidden}
   </div>
 </section>
 
+
 <!-- THE COLLECTIVE -->
 <section id="collective" class="coll">
-  <div class="wrap coll-in">
-    <p class="coll-eye">The Poppa Wahoo Collective</p>
-    <h2>One family. <em>Two islands.</em> <br>Whatever you came to catch.</h2>
-    <p class="coll-lede">Capt. Brian Epstein is not a one-boat operation with a phone number. He is part of the Epstein family fleet, founded in tribute to his father Bob, the Miami Herald fishing editor everyone called Poppa. Brian runs the shallow water out of Key Largo. His family runs the offshore fleet out of Islamorada, twenty minutes south on US-1. Between them there is very little in the Upper Keys you cannot book.</p>
-    <div class="coll-split">
-      <div class="coll-side here">
-        <p class="cs-where">Key Largo &middot; This boat</p>
-        <p class="cs-name">Captain Key Largo</p>
-        <p class="cs-boat">Capt. Brian Epstein &middot; 2021 Sea Hunt 25' bay boat</p>
-        <ul class="cs-list">
-          <li>Backcountry and flats: tarpon, bonefish, permit, snook, redfish</li>
-          <li>Patch reefs and channels for mangrove snapper and mackerel</li>
-          <li>Night trips: lobster in season, bowfishing, dark-water fishing</li>
-          <li>Snorkel, dive and eco runs, and Dine by Water barhops</li>
-        </ul>
-        <div class="cs-foot"><a href="tel:+19543267360" class="cs-tel">(954) 326-7360</a></div>
-      </div>
-      <div class="coll-side there">
-        <p class="cs-where">Islamorada &middot; The family fleet</p>
-        <p class="cs-name">The Poppa Wahoo Collective</p>
-        <p class="cs-boat">Four boats &middot; two Hatteras sportfishers, a bay boat, a tritoon</p>
-        <ul class="cs-list">
-          <li>Deep sea: mahi, sailfish, wahoo, blackfin tuna, blue marlin</li>
-          <li>Overnight swordfish trips and 5 pm evening shark runs</li>
-          <li>Dedicated reef days for yellowtail, mutton and grouper</li>
-          <li>Sunset cruises and sandbar runs on the Barletta tritoon</li>
-        </ul>
-        <div class="cs-foot"><a href="https://crossfiber.github.io/poppa-wahoo/" class="cs-go">See the Fleet <i class="fa-solid fa-arrow-right-long"></i></a></div>
-      </div>
+  <div class="wrap">
+    <div class="coll-head">
+      <h2>One family.<br><b>Two islands.</b></h2>
+      <p>Capt. Brian Epstein is not a one-boat operation with a phone number. He is part of the Epstein family fleet, founded in tribute to his father Bob, the Miami Herald fishing editor everyone called Poppa. Brian fishes the shallow water out of Key Largo. His family fishes the blue water out of Islamorada, twenty minutes south on US-1. Between them there is very little in the Upper Keys you cannot book.</p>
     </div>
-    <p class="coll-note">Brian will tell you straight when a trip belongs on the other boat, because it is his own family's boat and nobody loses. If you are not sure which island you want, call him and describe the day you are picturing. <a href="https://crossfiber.github.io/poppa-wahoo/islamorada-fish-species/">See what the offshore fleet targets</a> or <a href="the-epstein-family-fleet/">read the whole family story</a>.</p>
+  </div>
+  <div class="coll-pair">
+    <a class="cp" href="#trips">
+      <img src="assets/sea-hunt-boat.jpg" alt="Capt. Brian Epstein's 25 foot Sea Hunt bay boat on the flats off Key Largo" loading="lazy">
+      <div class="cp-tx">
+        <span class="cp-place">Key Largo</span>
+        <span class="cp-who">Capt. Brian Epstein, 25 foot Sea Hunt</span>
+        <p>Tarpon, bonefish, permit and snook on the flats. Patch reefs for dinner. Lobster, bowfishing and dark water after the sun goes down.</p>
+        <span class="cp-cta">See Brian's trips <i class="fa-solid fa-arrow-right-long"></i></span>
+      </div>
+    </a>
+    <a class="cp" href="https://crossfiber.github.io/poppa-wahoo/">
+      <img src="assets/pw-deep-sea.jpg" alt="A Poppa Wahoo Collective Hatteras sportfisher running offshore out of Islamorada" loading="lazy">
+      <div class="cp-tx">
+        <span class="cp-place">Islamorada</span>
+        <span class="cp-who">The Poppa Wahoo Collective, four boats</span>
+        <p>Mahi, sailfish, wahoo and blackfin on two Hatteras sportfishers. Overnight swordfish. Evening shark trips. Sunset and sandbar runs on the tritoon.</p>
+        <span class="cp-cta">See the family fleet <i class="fa-solid fa-arrow-right-long"></i></span>
+      </div>
+    </a>
+  </div>
+  <div class="wrap">
+    <p class="coll-note">Brian will tell you straight when a trip belongs on the other boat, because it is his own family's boat and nobody loses either way. Not sure which island you want? Call him and describe the day you are picturing. You can also <a href="https://crossfiber.github.io/poppa-wahoo/islamorada-fish-species/">see what the offshore fleet targets</a> or <a href="the-epstein-family-fleet/">read the whole family story</a>.</p>
   </div>
 </section>
 
